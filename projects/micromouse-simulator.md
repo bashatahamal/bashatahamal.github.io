@@ -2,7 +2,7 @@
 layout: project
 type: project
 modal-id: 5
-galleryImg: /images/test/
+galleryImg: /images/
 videoUrl: https://drive.google.com/file/d/1dHkPJzx6U0IE_ZtBW40rgu9dLfKNIVCR/preview
 image: images/micromouse1.jpg
 title: Micromouse Simulator 
