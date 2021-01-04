@@ -1,0 +1,29 @@
+<!-- <div class="embed-container">
+  <iframe width="700" height="480" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allowfullscreen=""></iframe>
+</div> -->
+
+<div class="embed-container">
+  <iframe class="vidplayer" src={{ include.url }} width="640" height="360" allowfullscreen="true"></iframe>
+</div>
+
+<script>
+  window.addEventListener("resize", framesize);
+
+  function framesize() {
+    h = document.getElementsByClassName('carousel__slide')[0].offsetHeight
+    w = document.getElementsByClassName('carousel__slide')[0].offsetWidth
+    for (i = 0; i < document.getElementsByClassName('vidplayer').length; i++) {
+      document.getElementsByClassName('vidplayer')[i].width = w
+      document.getElementsByClassName('vidplayer')[i].height = h
+    }
+  }
+
+  function checkCarousel() {
+    w = document.getElementsByClassName('carousel__slide')[0].offsetWidth
+    if (w > 0) {
+      framesize();
+      clearInterval(waitforsize)
+    };
+  }
+  waitforsize = setInterval(checkCarousel, 1000);
+</script>
