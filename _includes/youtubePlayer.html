@@ -3,27 +3,24 @@
 </div> -->
 
 <div class="embed-container">
-  <iframe class="vidplayer" src={{ include.url }} width="640" height="360" allowfullscreen="true"></iframe>
+  <iframe class="vidplayer" src={{ include.url }} width="640" height="360" allowfullscreen="true" loading="lazy"></iframe>
 </div>
 
 <script>
+
   window.addEventListener("resize", framesize);
 
   function framesize() {
-    h = document.getElementsByClassName('carousel__slide')[0].offsetHeight
-    w = document.getElementsByClassName('carousel__slide')[0].offsetWidth
-    for (i = 0; i < document.getElementsByClassName('vidplayer').length; i++) {
-      document.getElementsByClassName('vidplayer')[i].width = w
-      document.getElementsByClassName('vidplayer')[i].height = h
-    }
-  }
-
-  function checkCarousel() {
-    w = document.getElementsByClassName('carousel__slide')[0].offsetWidth
-    if (w > 0) {
-      framesize();
-      clearInterval(waitforsize)
+    n = document.getElementById('c' + last_id).getElementsByTagName('label')[0].htmlFor;
+    h = document.getElementsByClassName('carousel__slide')[n].offsetHeight;
+    w = document.getElementsByClassName('carousel__slide')[n].offsetWidth;
+    if (h > 0) { h_save = h };
+    if (w > 0) { w_save = w };
+    if (w_save > 0 && h_save > 0) {
+      for (i = 0; i < document.getElementsByClassName('vidplayer').length; i++) {
+        document.getElementsByClassName('vidplayer')[i].width = w_save;
+        document.getElementsByClassName('vidplayer')[i].height = h_save;
+      };
     };
-  }
-  waitforsize = setInterval(checkCarousel, 1000);
+  };
 </script>

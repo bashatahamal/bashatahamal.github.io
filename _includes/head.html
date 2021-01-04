@@ -38,6 +38,19 @@
     <script src="{{ site.baseurl }}/css/semantic-ui/semantic.min.js"></script>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/semantic-ui/semantic.min.css">
 
+    <script>
+        var w_save = 640
+        var h_save = 360
+        var last_id = 1
+
+        function check_carousel(id) {
+            last_id = id
+            n = document.getElementById('c' + id).getElementsByTagName('label')[0].htmlFor;
+            document.getElementsByClassName('carousel__activator')[n].checked = true;
+            setTimeout(framesize, 1000);
+        };
+
+    </script>
     <!-- Load Techfolio CSS customizations -->
     <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl}}/css/stylesheet-default.css">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl}}/css/stylesheet-customizations.css">

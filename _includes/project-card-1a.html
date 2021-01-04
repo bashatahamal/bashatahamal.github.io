@@ -2,7 +2,8 @@
 
 <!-- <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal"> -->
 <!-- <a class="card" href="{% if page.projecturl %}{{ page.projecturl }}{% else %}{{ site.baseurl}}{{ include.page.url }}{% endif %}"> -->
-<a class="card" data-toggle="modal" href="#portfolioModal-{{ page.modal-id }}" onclick="check_carousel({{page.modal-id}})">
+<a class="card" data-toggle="modal" href="#portfolioModal-{{ page.modal-id }}"
+  onclick="check_carousel({{page.modal-id}})">
   {% if include.page.image %}
   <div class="image">
     <img src="{{ site.baseurl }}/{{ include.page.image }}">
@@ -28,10 +29,3 @@
   </div>
 
 </a>
-
-<script>
-  function check_carousel(id) {
-    n = document.getElementById('c' + id).getElementsByTagName('label')[0].htmlFor;
-    document.getElementsByClassName('carousel__activator')[n].checked = true;
-  }
-</script>

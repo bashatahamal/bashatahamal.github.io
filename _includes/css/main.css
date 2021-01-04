@@ -127,9 +127,9 @@ header .intro-text .skills {
 @media(min-width:768px) {
     .navbar-fixed-top {
         padding: 25px 0;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
+        -webkit-transition: padding .5s;
+        -moz-transition: padding .5s;
+        transition: padding .5s;
     }
 
     .navbar-fixed-top .navbar-brand {
@@ -140,7 +140,7 @@ header .intro-text .skills {
     }
 
     .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
+        padding: 0px 0;
     }
 
     .navbar-fixed-top.navbar-shrink .navbar-brand {
@@ -371,7 +371,7 @@ footer .footer-col {
 }
 
 footer .footer-below {
-    padding: 25px 0;
+    padding: 5px 0;
     background-color: #{{ site.color.secondary-dark }};
 }
 
@@ -426,7 +426,7 @@ footer .footer-below {
 
 .portfolio-modal .modal-content h2 {
     margin: 0;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .portfolio-modal .modal-content img {
