@@ -4,49 +4,67 @@
 <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
     aria-hidden="true">
     <div class="modal-content">
-        <div class="close-modal hidden-xs hidden-sm" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl">
-                </div>
-            </div>
-        </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="close-modal hidden-xs hidden-sm" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center">
                     <div class="modal-body">
-                        <h2>{{ post.title }}</h2>
-                        <hr class="star-primary">
-                        <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered"
-                            alt="{{ post.alt }}">
-                        {% if post.description %}
-                        <p>{{ post.description }}</p>
-                        {% endif %}
-                        {% include carousel.html height="60" unit="%" folder=post.galleryImg %}
-                        {% if post.videoUrl %}
-                        <p>{% include youtubePlayer.html url=post.videoUrl %}</p>
-                        {% endif %}
-                        <ul class="list-inline item-details">
-                            {% if post.client %}
-                            <li>Client:
-                                <strong><a href="http://startbootstrap.com">{{ post.client }}</a>
-                                </strong>
-                            </li>
-                            {% endif %}
-                            {% if post.project-date %}
-                            <li>Date:
-                                <strong><a href="http://startbootstrap.com">{{ post.project-date }}</a>
-                                </strong>
-                            </li>
-                            {% endif %}
-                            {% if post.category %}
-                            <li>Service:
-                                <strong><a href="http://startbootstrap.com">{{ post.category }}</a>
-                                </strong>
-                            </li>
-                            {% endif %}
-                        </ul>
-                        <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: #{{ site.color.secondary }};"><i class="fa fa-times"></i>
-                            Close</button>
+                        <div class="row align-items-start">
+                            <h2>{{ post.title }}</h2>
+                            <hr class="star-primary">
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-xs-8">
+                                {% include carousel.html height="60" unit="%" folder=post.galleryImg %}
+                                {% if post.videoUrl %}
+                                <p>{% include youtubePlayer.html url=post.videoUrl %}</p>
+                                {% endif %}
+                            </div>
+                            <div class="col-xs-4">
+                                <!-- <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered"
+                                    alt="{{ post.alt }}"> -->
+                                {% if post.description %}
+                                <p>{{ post.description }}</p>
+                                {% endif %}
+
+                                <ul style="list-style-type:circle; text-align-last: left;">
+                                    {% for label in post.labels %}
+                                    <li>{{ label }}</li>
+                                    {% endfor %}
+                                </ul>
+
+                                <ul class="list-inline item-details">
+                                    {% if post.client %}
+                                    <li>Client:
+                                        <strong><a href="http://startbootstrap.com">{{ post.client }}</a>
+                                        </strong>
+                                    </li>
+                                    {% endif %}
+                                    {% if post.project-date %}
+                                    <li>Date:
+                                        <strong><a href="http://startbootstrap.com">{{ post.project-date }}</a>
+                                        </strong>
+                                    </li>
+                                    {% endif %}
+                                    {% if post.category %}
+                                    <li>Service:
+                                        <strong><a href="http://startbootstrap.com">{{ post.category }}</a>
+                                        </strong>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row align-items-end">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"
+                                style="background-color: #{{ site.color.secondary }};"><i class="fa fa-times"></i>
+                                Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
