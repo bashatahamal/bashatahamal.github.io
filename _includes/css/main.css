@@ -5,7 +5,7 @@
  */
 
 body {
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 p {
@@ -417,10 +417,13 @@ footer .footer-below {
 
 .portfolio-modal .modal-content {
     padding: 0;
-    min-height: 100%;
+    min-height: fit-content;
     border: 0;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
+    /* top: 50%;
+    transform: translateY(-50%); */
+    vertical-align: middle;
     background-clip: border-box;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -428,26 +431,26 @@ footer .footer-below {
 
 .portfolio-modal .modal-content h2 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .portfolio-modal .modal-content img {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .portfolio-modal .modal-content .item-details {
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
-{% assign size_x = 50 %}
+{% assign size_x = 45 %}
 
 .portfolio-modal .close-modal {
     position: absolute;
-    top: 20px;
-    right: 25px;
+    top: 10px;
+    right: 30px;
     width: {{ size_x}}px;
     height: {{ size_x}}px;
-    background-color: transparent;
+    /* background-color: transparent; */
     cursor: pointer;
 }
 
@@ -489,7 +492,7 @@ footer .footer-below {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
   
   /* Track */
@@ -519,4 +522,14 @@ div.col-sm-4.modal-description{
     overflow-y: auto; 
     text-align:justify;
     font-size: medium; 
+}
+
+.modal-body{
+    padding:0%;
+    padding-top: 10px;
+}
+
+hr{
+    margin-top: 10px;
+    margin-bottom: 15px;
 }

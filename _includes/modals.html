@@ -12,7 +12,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col d-flex justify-content-center">
+                <div class="col d-flex">
                     <div class="modal-body">
                         <div class="row align-items-start">
                             <h2>{{ post.title }}</h2>
@@ -20,7 +20,7 @@
                         </div>
                         <div class="row align-items-center">
                             <div class="col-sm-8">
-                                {% include carousel.html height="60" unit="%" folder=post.galleryImg %}
+                                {% include carousel.html height="65" unit="%" folder=post.galleryImg %}
                             </div>
                             <div class="col-sm-4 modal-description">
                                 <!-- <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered"
@@ -70,7 +70,7 @@
                         <div class="row align-items-end">
                             <hr class="star-primary">
                             <button type="button" class="btn btn-default" data-dismiss="modal"
-                                style="background-color: #{{ site.color.secondary }}; margin-top: -10px;"><i
+                                style="background-color: #{{ site.color.secondary }}; margin-top: -5px; margin-bottom: 10px"><i
                                     class="fa fa-times"></i>
                                 Close</button>
                         </div>
