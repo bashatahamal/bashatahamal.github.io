@@ -417,7 +417,8 @@ footer .footer-below {
 
 .portfolio-modal .modal-content {
     padding: 0;
-    min-height: fit-content;
+    /* min-height: fit-content; */
+    max-height: max-content;
     border: 0;
     border-radius: 10px;
     text-align: center;
