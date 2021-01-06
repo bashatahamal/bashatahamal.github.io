@@ -13,6 +13,13 @@ labels:
   - Project Management
   - Software Engineering
 summary: Developed an application for sharing shared interests and activities with the right people.
+describe-opening: Working in a team of three University of Hawaii computer engineering undergraduate students, we built a web application, Adventure Portal. [Click here](https://adventure-portal.github.io/) to see the team’s project page. The problem that the app seeks to solve is that it is often difficult for individuals to organize and find adventures with other people who share the same interests. The idea behind Adventure Portal was to create an application that helps individuals explore new activities by having a platform to easily organize events with similar minded people. It allows individuals who have an interesting activity to share, explore, and connect with people who share the same passion based on shared interests.
+describe-content:
+  - Creating profiles that pin favorited activities
+  - Creating adventures that other people can browse and join
+  - Searching for adventures based on interests
+describe-closing: From this project, I learned both technical and project management skills. On the technical side, I became familiar with the Meteor application framework and strengthened my understanding of HTML and JavaScript. I also strengthened my skills involving Git and GitHub for version control. In terms of project management, I learned how to effectively break down tasks within a project to smaller incremental steps that we referred to as issues. In addition, I learned to create, assign, and manage issues for project milestones through GitHub. 
+
 ---
 
 ### Project Overview

@@ -21,6 +21,10 @@
         document.getElementsByClassName('vidplayer')[i].width = w_save;
         document.getElementsByClassName('vidplayer')[i].height = h_save;
       };
+
+      for (i = 0; i < document.getElementsByClassName('modal-description').length; i++) {
+        document.getElementsByClassName('modal-description')[i].style.height = h_save + 'px'
+      };
     };
   };
 </script>

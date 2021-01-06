@@ -39,9 +39,9 @@ color:
 # Footer settings
 footer:
   copyright: Basha Tahamal
-  location: Location
+  location: Address
   social: Around the Web
-  credits: Credits
+  credits: Phone Number (WA/LINE)
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -51,18 +51,18 @@ social:
     url:
   - title: stack-overflow
     url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
+  - title: linkedin
+    url: http://linked.in/jekyll
   - title: github
     url: http://github.com/jekyll
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: Jl. Magelang km 8
+  - line: Sleman, Yogyakarta 55285
 
 # Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+credits: '+6285643755459'
 
 # Build settings
 markdown: kramdown

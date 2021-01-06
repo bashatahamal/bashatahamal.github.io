@@ -19,24 +19,25 @@
                             <hr class="star-primary">
                         </div>
                         <div class="row align-items-center">
-                            <div class="col-xs-8">
+                            <div class="col-sm-8">
                                 {% include carousel.html height="60" unit="%" folder=post.galleryImg %}
-                                {% if post.videoUrl %}
-                                <p>{% include youtubePlayer.html url=post.videoUrl %}</p>
-                                {% endif %}
                             </div>
-                            <div class="col-xs-4">
+                            <div class="col-sm-4 modal-description">
                                 <!-- <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered"
                                     alt="{{ post.alt }}"> -->
-                                {% if post.description %}
-                                <p>{{ post.description }}</p>
+                                {% if post.describe-opening %}
+                                <p>{{ post.describe-opening }}</p>
                                 {% endif %}
 
-                                <ul style="list-style-type:circle; text-align-last: left;">
-                                    {% for label in post.labels %}
-                                    <li>{{ label }}</li>
+                                <ul style="list-style-type: disc; text-align-last: left;">
+                                    {% for point in post.describe-content %}
+                                    <li>{{ point }}</li>
                                     {% endfor %}
                                 </ul>
+
+                                {% if post.describe-closing %}
+                                <p>{{ post.describe-closing }}</p>
+                                {% endif %}
 
                                 <ul class="list-inline item-details">
                                     {% if post.client %}
@@ -60,9 +61,17 @@
                                 </ul>
                             </div>
                         </div>
+
+                        <div class="row-align-items-center">
+                            {% if post.videoUrl %}
+                            <p>{% include youtubePlayer.html url=post.videoUrl %}</p>
+                            {% endif %}
+                        </div>
                         <div class="row align-items-end">
+                            <hr class="star-primary">
                             <button type="button" class="btn btn-default" data-dismiss="modal"
-                                style="background-color: #{{ site.color.secondary }};"><i class="fa fa-times"></i>
+                                style="background-color: #{{ site.color.secondary }}; margin-top: -10px;"><i
+                                    class="fa fa-times"></i>
                                 Close</button>
                         </div>
                     </div>
