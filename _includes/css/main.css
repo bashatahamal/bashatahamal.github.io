@@ -444,6 +444,9 @@ footer .footer-below {
     justify-content: center;
     align-items: center;
 
+    top: 50%;
+    transform: translateY(-50%);
+
 }
 
 .portfolio-modal .modal-content h2 {
