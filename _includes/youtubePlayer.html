@@ -26,8 +26,8 @@
         document.getElementsByClassName('modal-description')[i].style.height = h_save + 'px'
       };
     };
-    if (window.innerHeight - document.getElementById('m'+last_id).offsetHeight > 0){
-      x = (window.innerHeight - document.getElementById('m'+last_id).offsetHeight)/2
+    if (document.body.clientHeight - document.getElementById('m'+last_id).offsetHeight > 0){
+      x = (document.body.clientHeight - document.getElementById('m'+last_id).offsetHeight)/2
       document.getElementById('m'+last_id).style.top = x+'px'
     };
   };
