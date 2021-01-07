@@ -3,7 +3,8 @@
 </div> -->
 
 <div class="embed-container">
-  <iframe class="vidplayer" src={{ include.url }} width="640" height="360" allowfullscreen="true" loading="lazy"></iframe>
+  <iframe class="vidplayer" src={{ include.url }} width="640" height="360" allowfullscreen="true"
+    loading="lazy"></iframe>
 </div>
 
 <script>
@@ -26,9 +27,14 @@
         document.getElementsByClassName('modal-description')[i].style.height = h_save + 'px'
       };
     };
-    if (document.body.clientHeight - document.getElementById('m'+last_id).offsetHeight > 0){
-      x = (document.body.clientHeight - document.getElementById('m'+last_id).offsetHeight)/2
-      document.getElementById('m'+last_id).style.top = x+'px'
+    if (document.body.clientHeight - document.getElementById('m' + last_id).offsetHeight > 0) {
+      x = (document.body.clientHeight - document.getElementById('m' + last_id).offsetHeight) / 2
+      document.getElementById('m' + last_id).style.top = x + 'px'
     };
   };
+
+  function stop() {
+    var iframe = document.getElementById('ytplayer');
+    iframe.src = iframe.src;
+  }
 </script>
