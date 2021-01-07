@@ -415,7 +415,32 @@ footer .footer-below {
     outline: 0;
 }
 
+.portfolio-modal .modal-content {
+    padding: 0;
+    /* min-height: fit-content; */
+    max-height: max-content;
+    /* height: fit-content; */
+    border: 0;
+    border-radius: 10px;
+    text-align: center;
+    /* top: 50%;
+    transform: translateY(-50%); */
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 
+.modal-dialog{
+    background-color: #fff;
+    width: auto;
+    height: max-content;
+    margin: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
 
 .portfolio-modal .modal-content h2 {
     margin: 0;
