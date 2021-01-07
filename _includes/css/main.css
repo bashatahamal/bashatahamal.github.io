@@ -541,7 +541,8 @@ div.col-sm-4.modal-description{
     overflow-x: auto; 
     overflow-y: auto; 
     text-align:justify;
-    font-size: medium; 
+    font-size: medium;
+    margin: 25px;
 }
 
 .modal-body{
