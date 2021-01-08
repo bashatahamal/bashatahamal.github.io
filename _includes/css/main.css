@@ -384,7 +384,7 @@ footer .footer-below {
     border: 2px solid #fff;
     border-radius: 100%;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 45px;
 }
 
@@ -544,7 +544,7 @@ div.col-sm-4.modal-description{
     overflow-y: auto; 
     text-align:justify;
     font-size: medium;
-    margin: 25px;
+    /* margin: 25px; */
 }
 
 .modal-body{

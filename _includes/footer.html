@@ -15,10 +15,17 @@
                     <h3>{{ site.footer.social }}</h3>
                     <ul class="list-inline">
                         {% for network in site.social %}
-                        <li>
-                            <a href="{{ network.url }}" class="btn-social btn-outline"><i
-                                    class="fa fa-fw fa-{{ network.title }}"></i></a>
-                        </li>
+                            {% if network.title == "paper-plane" or network.title == "envelope"%}
+                            <li>
+                                <a href="{{ network.url }}" class="btn-social btn-outline"><i
+                                    id="fa-{{ network.title }}" class="fas fa-fw fa-{{ network.title }}"></i></a>
+                            </li>
+                            {% else %}
+                            <li>
+                                <a href="{{ network.url }}" class="btn-social btn-outline"><i
+                                    id="fa-{{ network.title }}" class="fab fa-fw fa-{{ network.title }}"></i></a>
+                            </li>
+                            {% endif %}
                         {% endfor %}
                     </ul>
                 </div>
@@ -27,16 +34,14 @@
                         {{ site.footer.credits }}
                     </h3>
                     <p style="display: inline; margin-top: 20px; margin-right: -20px;">{{ site.credits }}
-                        <img class="svg-icon" src="/css/line-brands.svg" alt="Line">
-                        <a class="svg-icon" href="http://wa.me/+6285643755459">
-                            <img class="svg-icon" src="/css/whatsapp-brands.png" alt="WhatsApp">
-                        </a>
+                        <a style="color: white; margin-left: 4px; margin-right: 3px;" class="fab fa-line" href="line://oaMessage/@bashatahamal/"></a>
+                        <a style="color: white;" class="fab fa-whatsapp" href="http://wa.me/+6285643755459"></a>
                     </p>
                     <!-- <img class="svg-icon" src="/css/line-brands.svg" alt="Line">
                     <a class="svg-icon" href="http://wa.me/+6285643755459">
                         <img class="svg-icon" src="/css/whatsapp-brands.png" alt="WhatsApp">
                     </a> -->
-                    <p>{{ site.email }} <i style="margin-left: 4px;" class="fa fa-fw fa-envelope"></i></p>
+                    <p>{{ site.email }} <a href="mailto:{{ site.email }}" style="color:white; margin-left: 4px;" class="fa fa-fw fa-envelope"></a></p>
                 </div>
             </div>
         </div>
