@@ -87,6 +87,7 @@ hr.star-primary:after {
     width: 300px;
     height: 300px;
     min-height: 256px;
+    min-width: 256px;
     display: inline-block;
 }
 
