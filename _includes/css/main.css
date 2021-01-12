@@ -83,7 +83,7 @@ hr.star-primary:after {
 
 #circle {
     background: #{{ site.color.secondary }};
-    border-radius: 30%;
+    border-radius: 50%;
     width: 300px;
     height: 300px;
     min-height: 256px;
@@ -91,9 +91,10 @@ hr.star-primary:after {
     display: inline-block;
 }
 
-/* .img-responsive{
-    max-height: 300px;
-} */
+.img-responsive{
+    /* max-height: 300px; */
+    padding: 25px;
+}
 
 header {
     text-align: center;
