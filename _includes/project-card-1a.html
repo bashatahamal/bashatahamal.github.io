@@ -1,7 +1,5 @@
 <!-- Used by theme-projects-builtin-1a, entire card is the link. -->
 
-<!-- <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal"> -->
-<!-- <a class="card" href="{% if page.projecturl %}{{ page.projecturl }}{% else %}{{ site.baseurl}}{{ include.page.url }}{% endif %}"> -->
 <a class="card" data-toggle="modal" href="#portfolioModal-{{ page.modal-id }}"
   onclick="check_carousel({{page.modal-id}})">
   {% if include.page.image %}

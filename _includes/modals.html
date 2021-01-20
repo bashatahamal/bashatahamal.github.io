@@ -1,5 +1,5 @@
 <!-- Portfolio Modals -->
-{% assign project_pages = site.pages | where: "type", "project" | sort: "date" | reverse %}
+{% assign project_pages = site.pages | where: "type", "project" | sort: "name" | reverse %}
 {% for post in project_pages %}
 <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
     aria-hidden="true">
@@ -15,7 +15,7 @@
                 <div class="col d-flex">
                     <div class="modal-body">
                         <div class="row align-items-start">
-                            <h2>{{ post.title }}</h2>
+                            <h2 style="text-transform: capitalize;">{{ post.title }}</h2>
                             <hr class="star-primary">
                         </div>
                         <div class="row align-items-center">
