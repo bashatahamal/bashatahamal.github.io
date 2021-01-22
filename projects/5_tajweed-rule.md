@@ -7,7 +7,7 @@ permalink: projects/tajweed-rule
 modal-id: 5
 image: images/thumbnails/tajweed-rule.jpg
 galleryImg: /images/tajweed-rule
-videoUrl: https://drive.google.com/file/d/1dHkPJzx6U0IE_ZtBW40rgu9dLfKNIVCR/preview
+videoUrl: https://drive.google.com/file/d/1ZP2N09kOzt2V6csJlu4NogLvtbJfZf7L/preview?resourcekey=null
 date: September 2020
 labels:
     - computer vision

@@ -7,7 +7,7 @@ permalink: projects/ITMS
 modal-id: 6
 image: images/thumbnails/traffic.jpg
 galleryImg: /images/traffic
-videoUrl: https://drive.google.com/file/d/1dHkPJzx6U0IE_ZtBW40rgu9dLfKNIVCR/preview
+videoUrl: https://drive.google.com/file/d/1AZoIrjbBcgRZGFJJ1PWqicQ99VftfeRm/preview?resourcekey=null
 date: December 2020
 labels:
     - object recognition

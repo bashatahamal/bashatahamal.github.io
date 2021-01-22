@@ -7,7 +7,7 @@ permalink: projects/pedect
 modal-id: 3
 image: images/thumbnails/pedect.jpg
 galleryImg: /images/pedect
-videoUrl: https://drive.google.com/file/d/1dHkPJzx6U0IE_ZtBW40rgu9dLfKNIVCR/preview
+videoUrl: https://drive.google.com/file/d/1oVFsRA312z5ffcr8rqHKy0UeP3n5KrYM/preview?resourcekey=null
 date: December 2019
 labels:
     - computer vision
