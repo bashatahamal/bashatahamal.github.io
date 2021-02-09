@@ -22,22 +22,24 @@
                             <div class="col-sm-8">
                                 {% include carousel.html height="65" unit="%" folder=post.galleryImg %}
                             </div>
-                            <div class="col-sm-4 modal-description">
+                            <div class="col-sm-4 modal-description" style="direction: rtl;">
                                 <!-- <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered"
                                     alt="{{ post.alt }}"> -->
-                                {% if post.describe-opening %}
-                                <p style="text-indent: 20px; margin-top: 20px;">{{ post.describe-opening }}</p>
-                                {% endif %}
-
-                                <ul style="list-style-type: disc; text-align-last: left;">
-                                    {% for point in post.describe-content %}
-                                    <li>{{ point }}</li>
-                                    {% endfor %}
-                                </ul>
-
-                                {% if post.describe-closing %}
-                                <p>{{ post.describe-closing }}</p>
-                                {% endif %}
+                                <div style="direction: ltr;">
+                                    {% if post.describe-opening %}
+                                    <p style="text-indent: 20px; margin-top: 20px;">{{ post.describe-opening }}</p>
+                                    {% endif %}
+    
+                                    <ul style="list-style-type: disc; text-align-last: left;">
+                                        {% for point in post.describe-content %}
+                                        <li>{{ point }}</li>
+                                        {% endfor %}
+                                    </ul>
+    
+                                    {% if post.describe-closing %}
+                                    <p>{{ post.describe-closing }}</p>
+                                    {% endif %}
+                                </div>
 
                                 <ul class="list-inline item-details">
                                     {% if post.client %}

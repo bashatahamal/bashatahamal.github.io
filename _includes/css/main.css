@@ -530,6 +530,7 @@ footer .footer-below {
 /* width */
 ::-webkit-scrollbar {
     width: 8px;
+    /* direction: rtl; */
   }
   
   /* Track */
