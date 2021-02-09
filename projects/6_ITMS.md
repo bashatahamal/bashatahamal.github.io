@@ -19,12 +19,16 @@ labels:
     - flask
     - javascript
     - html/css
-summary: Traffic monitoring system for vehicle counting and violation detection.
-describe-opening: write some opening desciption in first paragraph
+summary: Traffic monitoring system for vehicle counting and traffic rules violation detection.
+describe-opening: Intelligent Traffic Monitoring System is an image processing based software for vehicle counting (cars, buses, trucks, motorbikes, pedestrians) and traffic rules violation detection (illegal turns and directions) using video as input via online streaming, video files or cameras to get frames image to be processed. This professional project was done by two people in approximately 5 months and the work I did
 describe-content:
-    - create a list of work
-    - another list of work
-    - and another list of work
-describe-closing: write closing paragraph
+    - Become a leader in project completion.
+    - Provide solutions and ideas on how the project can be done, including the methods used
+    - Help build the dataset using low resolution CCTV images
+    - Preparing, tuning and training the model using the dataset created (Yolov5)
+    - Build a web-based interface for the system using Flask framework
+    - Implementing a web-based interface design with html, css, and javascript
+    - Build the traffic rules violation detection algorithm based on video input and object detection results.
+describe-closing:
 
 ---

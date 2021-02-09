@@ -13,11 +13,8 @@ labels:
     - API
     - php
 summary: Cleaning picket reminder on Line messaging app group and a simple ask-answer bot.
-describe-opening: write some opening desciption in first paragraph
+describe-opening: This project was created when I was a member of the internal organization of the department (HMEI), which aims to make it easier for members to know the cleaning picket schedule as well as being an automatic reminder (bot) in the organization's internal chat group (Line). Created with the help of Line Messaging API with a server deployed on a free web hosting (PHP).
 describe-content:
-    - create a list of work
-    - another list of work
-    - and another list of work
-describe-closing: write closing paragraph
+describe-closing: 
 
 ---
