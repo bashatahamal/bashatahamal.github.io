@@ -91,3 +91,53 @@ Hi, namaku Basha aku lulusan Departemen Ilmu Komputer dan Elektronika, Universit
 ---------------------------------------------------------------
 
 Hi, my name is Basha, I have a degree in the Department of Computer Science and Electronics, Gadjah Mada University, majoring in Electronics and Instrumentation with cum laude predicate. I can learn things quickly and creatively. I am also a person who does not give up easily and an excelent thinker. When working in a team I play most of the role as a leader and as a member I can still contribute with my creative ideas and collaborate effectively. I can adapt to various conditions quickly by always trying to push myself to learn to be better and trying to take initiative. I have an interest in software in general and what I have been researching and working on recently is machine learning, computer vision and a little bit about web development. This is just the beginning of what I can do and I believe in my potential to be able to do more. So, nice to meet you and what can we collaborate on after this? Let's see. ;)
+
+------------------------------------------------------------------
+
+Python line bot poster design BEM KP Data handling, LF ERC, Plastic Bottle project as CV engineer, Parsing Data heroku webhost automatic remander php backend logo design, koor PDD huthmei for bot little bit front PKM machine learning C++ Javascript html css bootstrap AJAX PHP Jquery database system Mysql L_inuxA_pacheM_ysqlP_hp Intel movidius Data science project designing project solving problem ideas , framework for python flexible django tf , Parsing JSON Android Apps , API Thingspeak, Twittersrape VaderSentiment, automatic weather station, scoreboard KKN, Road Damage Project, Traffic Project.
+FInal Project ..
+
+Team leadership, team leader
+linux user
+
+organization:
+Koordinator Mahasiswa Subunit KKN
+HMEI (line bot)
+ERC (scoreboard, inventarisasi, modul, raspbery)
+KRPY (juri, workshop, LO) 
+BEM (baksos, diskusi rutin, Best event)
+Event jurusan dan BEM (internal & eksternal) (Divisi Lomba, baksos)
+
+Professional project:
+Intelligent traffic monitoring system (software)
+Road Damage Detection (software)
+Pedestrian Tracking (hardware & software)
+automatic weather station (hardware & software)
+
+Personal project:
+Undergraduated Project
+Relink automatic Plastic Bottle Separator (CV)
+scoreboard (KKN)
+Linebot
+ERC project
+IoT parsing JSON Android Apps API
+
+College assigment
+
+-------------------
+Grammar:
+- Punctuation Let us see , etc
+- Numbering to be consistent (two, three)
+- Subject (always nouns {persons, places, things, ideas}, pronouns, or things that act like them) and Predicate (verb and its preposition/adverb {Phrases, Clauses, Parenthetical statements, interjections}) must agree in number (Plurar or Singular)
+- Possesive pronouns does'nt need apostrophes (its not it's)
+
+---
+HaCKERANK!!!
+Opp
+- KoinWorks
+- LinkAja
+- Codex.works (Telkom)
+- Tokopedia (ML/Competitve programming test logic algorithm/HackerRank) 
+- GDP Labs (Bisa di jogja seiring rekruitment / HackerRank/ AI Engineer) Coding test User interview HR interview  
+- Ecomindo (Remote Working) JunPro AI available but is though
+- Niagahoster Jogja Data Engineer Full Remote

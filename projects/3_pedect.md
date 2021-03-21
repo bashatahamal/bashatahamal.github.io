@@ -18,11 +18,11 @@ labels:
     - hardware component
     - actuator
     - python
-summary: Utilize pedestrian detection for sidewalk safety on roadblocks using realtime video processing.
-describe-opening: This project is a student creativity program funded by DIKTI (PKM) by submitting a proposal and an obligation to make a final report. It is a road block like tool on a pedestrian path that utilizes object detection using a camera (Raspberry Pi 3 + Intel Movidius 2) which functions to prevent others than pedestrians and cyclists from entering the area. This is a professional project done by 3 people and the work I did
+summary: Utilization of object recognition for sidewalk safety on roadblocks using real time video processing.
+describe-opening: This project is a student creativity program (PKM) funded by Directorate General of Higher Education, Ministry of National Education (DIKTI) by submitting a proposal and an obligation to make a final report. It is a road block like tool on a pedestrian path that utilizes object detection using camera (Raspberry Pi 3 + Intel Movidius 2) which functions to prevent others than pedestrians and cyclists from entering the area. This is a professional project done by three people and the work I did
 describe-content:
     - Leader in the team
-    - Designing the tool and components needed.
+    - Worked on designing the tool and components needed.
     - Programmer (Python, NCSDK, others software related)
 describe-closing:
 

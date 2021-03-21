@@ -8,7 +8,7 @@ description: "Muhammad Hawatif Basharuddin Rabbani Tahammal portfolio web"
 keywords: "Basha, Computer Vison, Machine Learning, Software Engineer"
 skills: "Software Engineer - Machine Learning - Computer Vision"
 meta_author: Tahamal Basha
-about: Hi, my name is Basha, I have a degree in the Department of Computer Science and Electronics, Gadjah Mada University, majoring in Electronics and Instrumentation with cum laude predicate. I can learn things quickly and creatively. I am also a person who does not give up easily and an excelent thinker. When working in a team I play most of the role as a leader and as a member I can still contribute with my creative ideas and collaborate effectively. I can adapt to various conditions quickly by always trying to push myself to learn to be better and trying to take initiative. I have an interest in software in general and what I have been researching and working on recently is machine learning, computer vision and a little bit about web development. This is just the beginning of what I can do and I believe in my potential to be able to do more and benefit society with the skills I have. 
+about: Hi, my name is Basha, I have a degree in the Department of Computer Science and Electronics, Universitas Gadjah Mada, majoring in Electronics and Instrumentation with cum laude predicate. I can learn things quickly and creatively. I am also a resilient person and an excellent thinker. When working in a team I play most of the role as a leader and as a member I can still contribute with my creative ideas and collaborate effectively. I can adapt to various conditions quickly by always trying to push myself to learn to be better and trying to take initiative. I have an interest in software in general and what I have been researching and working on recently is machine learning, computer vision and some web development. This is just the beginning of what I can do and I believe in my potential to be able to do more and benefit society with the skills I have. 
 
 baseurl: ""
 theme-home: theme-home-builtin-1.html
@@ -54,15 +54,15 @@ footer:
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: http://twitter.com/bashatahamal
+    url: https://twitter.com/bashatahamal
   - title: paper-plane
-    url: http://t.me/bashatahamal
+    url: https://t.me/bashatahamal
   - title: envelope
     url: mailto:m.hawatif.basharuddin@mail.ugm.ac.id
   - title: linkedin
-    url: http://linked.in/bashatahamal
+    url: https://www.linkedin.com/in/basha-tahamal-8a956412b
   - title: github
-    url: http://github.com/bashatahamal
+    url: https://github.com/bashatahamal
 
 # Postal address (add as many lines as necessary)
 address:
