@@ -6,6 +6,6 @@ Modified Jekyll theme based on [Freelancer bootstrap theme ](http://startbootstr
 
 # debian run 
 sudo apt-get install ruby-full build-essential
-gem install jekyll bundler
-bundle install
+sudo gem install jekyll bundler
+sudo bundle install
 bundle exec jekyll serve

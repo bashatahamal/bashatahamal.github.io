@@ -479,7 +479,7 @@ footer .footer-below {
     margin: 5px 0;
 }
 
-{% assign size_x = 45 %}
+{% assign size_x = 25 %}
 
 .portfolio-modal .close-modal {
     position: absolute;
