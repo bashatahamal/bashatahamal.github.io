@@ -55,14 +55,18 @@ footer:
 social:
   - title: twitter
     url: https://twitter.com/bashatahamal
-  - title: paper-plane
+  - title: telegram
     url: https://t.me/bashatahamal
-  - title: envelope
-    url: mailto:m.hawatif.basharuddin@mail.ugm.ac.id
+  - title: whatsapp
+    url: https://wa.me/+6285643755459
+  # - title: envelope
+  #   url: mailto:m.hawatif.basharuddin@mail.ugm.ac.id
   - title: linkedin
     url: https://www.linkedin.com/in/bashatahamal
-  - title: github
-    url: https://github.com/bashatahamal
+  - title: line
+    url: https://line.me/ti/p/-dvE2Uf8BA
+  # - title: github
+  #   url: https://github.com/bashatahamal
 
 # Postal address (add as many lines as necessary)
 address:
