@@ -85,6 +85,14 @@ This professional project was done by two people in approximately 5 months and t
 - Implementing a web-based interface design with html, css, and javascript
 - Build the traffic rules violation detection algorithm based on video input and object detection results.
 
+Relink Automatic Plastic Bottle Separator
+April 2019
+
+Relink Automatic Plastic Bottle Separator is an actutator tool built using conveyor belt and pneumatic cylinder that being controlled using raspbbery phi + camera to decide whether the plastic bottle is belong to a certain catagory based on its color.
+contribute in coding, testing, and setting up raspbbery phi to run python opencv that being used to clasify plastic bottle based on it's color using camera.
+
+tech stack: python, opencv, raspbbery phi
+
 ---------------------------------------------------------------
 
 Hi, namaku Basha aku lulusan Departemen Ilmu Komputer dan Elektronika, Universitas Gadjah Mada Jurusan Elektronika dan Instrumentasi dengan predikat cumlaude. Aku dapat mempelajari sesuatu hal dengan cepat dan kreatif. Aku juga seorang yang tidak mudah putus asa dan seorang pemikir yang bagus (excelent thinker). Saat bekerja dalam tim sebagian besar peranan yang saya lakukan adalah sebagai pemimpin tetapi saat menjadi anggota pun saya tetap dapat berkontribusi dengan ide ide kreatif saya dan berkolaborasi secara efektif. Saya dapat beradaptasi pada berbagai kondisi dengan cepat dengan selalu berusaha mendorong diri saya untuk belajar menjadi lebih baik dan mencoba untuk melakukan inisiatif. Saya mempunyai ketertarikan pada dunia software secara umum dan yang saya dalami belakangan ini adalah machine learning, computer vision dan sedikit tentang pembangunan web. Ini baru permulaan dari apa yang bisa saya lakukan untuk berkontribusi pada dunia dan saya percaya pada potensi yang saya miliki untuk dapat melakukan lebih. Jadi, senang bertemu anda dan apa yang bisa kita kolaborasikan setelah ini ? Mari kita lihat. ;)
