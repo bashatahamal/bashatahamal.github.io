@@ -4,7 +4,7 @@ type: project
 
 title: Quran Tajweed Rules Recognition
 permalink: projects/tajweed-rule
-modal-id: 5
+modal-id: 6
 image: images/thumbnails/tajweed-rule.jpg
 galleryImg: /images/tajweed-rule
 videoUrl: https://drive.google.com/file/d/1ZP2N09kOzt2V6csJlu4NogLvtbJfZf7L/preview?resourcekey=null

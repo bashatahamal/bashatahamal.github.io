@@ -4,10 +4,10 @@ type: project
 
 title: Automatic Rain Water Sampler and Real-time Monitoring System
 permalink: projects/weather-plus
-modal-id: 2
+modal-id: 3
 image: images/thumbnails/weather-plus.jpg
 galleryImg: /images/weather-plus
-date: March 2019
+date: April 2019
 labels:
     - microcontroller
     - sensor
@@ -22,7 +22,7 @@ labels:
     - javascript
     - html/css
 summary: Real-time monitoring system for humidity, ambient temperature and dust particle with wireless data logger and automatic rain water sampler.
-describe-opening: This project was carried out during practical work at Meteorological, Climatological, and Geophysical Agency (BMKG) with the main objective of this project is to make a low-cost environmental monitoring device with various features and combine it with a tool that collects rainwater automatically. The automatic rainwater collector has a cover for the rainwater collection container which only open when it rains. Environmental condition data collected are air humidity, ambient temperature and dust particles. This project was done by three people and the work I did 
+describe-opening: This project was carried out during on the job training at Meteorological, Climatological, and Geophysical Agency (BMKG). Main objective of this project is to make a low-cost environmental monitoring device with various features and combine it with a tool that collects rainwater automatically. The automatic rainwater collector has a cover for the rainwater collection container which only open when it rains. Environmental condition data collected are air humidity, ambient temperature and dust particles. This project was done by three people and the work I did 
 describe-content:
     - Became a leader in technical project completion
     - Built a wireless data logger for data collection and communication tools.
