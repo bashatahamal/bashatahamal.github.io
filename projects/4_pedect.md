@@ -8,7 +8,7 @@ modal-id: 4
 image: images/thumbnails/pedect.jpg
 galleryImg: /images/pedect
 videoUrl: https://drive.google.com/file/d/1oVFsRA312z5ffcr8rqHKy0UeP3n5KrYM/preview?resourcekey=null
-date: December 2019
+date: August - December 2019
 labels:
     - computer vision
     - camera

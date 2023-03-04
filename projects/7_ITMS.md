@@ -8,7 +8,7 @@ modal-id: 7
 image: images/thumbnails/traffic.jpg
 galleryImg: /images/traffic
 videoUrl: https://drive.google.com/file/d/1AZoIrjbBcgRZGFJJ1PWqicQ99VftfeRm/preview?resourcekey=null
-date: December 2020
+date: December 2020 - February 2021
 labels:
     - object recognition
     - deep learning

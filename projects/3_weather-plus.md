@@ -7,7 +7,7 @@ permalink: projects/weather-plus
 modal-id: 3
 image: images/thumbnails/weather-plus.jpg
 galleryImg: /images/weather-plus
-date: April 2019
+date: March - April 2019
 labels:
     - microcontroller
     - sensor
