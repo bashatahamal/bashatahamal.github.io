@@ -12,7 +12,7 @@ labels:
     - ML & Software Engineer
     - DevOps
 summary: A fashion and lifestyle e-commerce platform & personal styling based on Artificial Intelligence.
-describe-opening: A fashion and lifestyle e-commerce platform & personal styling based on Artificial Intelligence. Role -> Machine Learning & Software Engineer, DevOps
+describe-opening: Role -> Machine Learning & Software Engineer, DevOps
 
 describe-content:
     - Built user clustering services for a better data analysis.
