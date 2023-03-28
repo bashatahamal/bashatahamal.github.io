@@ -34,6 +34,6 @@ describe-content:
     - Adding listener and notifier postgres database for data validation.
     - Built and maintain task scheduler services using Celery, Django, Mongo db and Rabbit MQ.
     - Responsible for migrating data, cleaning data to database or to be served as data summary for further analysis.
-describe-closing: Tech stack -> Python, Scikit-learn, OpenCV, Google Vision, Numpy, Pandas, Google Cloud Platform, Amazon Web Services, Kubernetes, Ansible, Terraform, Kubernetes Operations (KOps), Jenkins, Cloudflare, Telegram bot UI, Bitbucket webhook, Selenium, PyWinAuto, Flask, FastAPI, Django, Celery, Rabbit MQ, Postgres, Mongo DB, NodeJS, TypeORM, Typescript.
+describe-closing: Tech stack -> Python, Scikit-learn, OpenCV, Numpy, Pandas, Flask, FastAPI, Django, Celery, Rabbit MQ, Postgres, Mongo DB, NodeJS, TypeORM, Typescript, Google Cloud Platform, Amazon Web Services, Google Vision, Kubernetes, Ansible, Terraform, Kubernetes Operations (KOps), Jenkins, Cloudflare, Telegram bot UI, Bitbucket webhook, Selenium, PyWinAuto
 
 ---
