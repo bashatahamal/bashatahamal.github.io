@@ -26,10 +26,10 @@ describe-opening: This project was carried out during on the job training at Met
 describe-content:
     - Became a leader in technical project completion
     - Built a wireless data logger for data collection and communication tools.
-    - Worked on designing and creating a web-based user interface (html, css, ajax, javascript)
-    - Worked on designing and making data communication between the device created with the database on a local wireless computer using wifi (C++, mysql, PHP)
-    - Worked on designing the enclosure of the tools using acrylic (CorelDraw)
-    - Collaborated on hardware programming (ESP32)
+    - Worked on designing and creating a web-based user interface (html, css, ajax, javascript).
+    - Worked on designing and making data communication between the device created with the database on a local wireless computer using wifi (C++, mysql, PHP).
+    - Worked on designing the enclosure of the tools using acrylic (CorelDraw).
+    - Collaborated on hardware programming (ESP32).
 describe-closing:
 
 ---
