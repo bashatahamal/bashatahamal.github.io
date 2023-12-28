@@ -7,7 +7,7 @@ permalink: projects/yuna
 modal-id: 8
 image: images/thumbnails/yuna.jpg
 galleryImg: /images/yuna
-date: April 2021 - Now
+date: April 2021 - June 2023
 labels:
     - ML & Software Engineer
     - DevOps
