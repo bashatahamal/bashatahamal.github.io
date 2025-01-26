@@ -433,6 +433,7 @@ footer .footer-below {
 .portfolio-modal .modal-content {
     padding: 0;
     /* min-height: fit-content; */
+    min-height: 100%;
     max-height: max-content;
     /* height: fit-content; */
     border: 0;
@@ -483,37 +484,35 @@ footer .footer-below {
 
 .portfolio-modal .close-modal {
     position: absolute;
-    top: 10px;
-    right: 30px;
-    width: {{ size_x}}px;
-    height: {{ size_x}}px;
-    /* background-color: transparent; */
-    cursor: pointer;
+    top: {{ size_x | divided_by: 2}}px; /* Keep it near the top-right */
+    right: {{ size_x | divided_by: 2}}px; /* Adjust distance from the edge */
+    width: {{ size_x}}px; /* Increase size for better clickability */
+    height: {{ size_x}}px; /* Same as width */
+    background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent dark background */
+    border-radius: 50%; /* Make it circular */
+    cursor: pointer; /* Indicate it's interactive */
+    z-index: 1053; /* Ensure it appears above other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .portfolio-modal .close-modal:hover {
-    opacity: .3;
+    background-color: rgba(255, 0, 0, 0.8); /* Add a bold red hover effect */
 }
 
 .portfolio-modal .close-modal .lr {
-    z-index: 1051;
-    width: 1px;
-    height: {{ size_x}}px;
-    margin-left: 30px;
-    background-color: #{{ site.color.secondary }};
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+    width: {{ size_x | divided_by: 10}}px; /* Make the crossbars thicker */
+    height: {{ size_x | times: 0.75}}px; /* Adjust height for the "X" arms */
+    background-color: #fff; /* White for better visibility */
+    transform: rotate(45deg); /* Rotate to create the first arm of the "X" */
 }
 
 .portfolio-modal .close-modal .lr .rl {
-    z-index: 1052;
-    width: 1px;
-    height: {{ size_x}}px;
-    background-color: #{{ site.color.secondary }};
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+    width: {{ size_x | divided_by: 10}}px; /* Same thickness as above */
+    height: {{ size_x | times: 0.75}}px; /* Same height as above */
+    background-color: #fff; /* Consistent color */
+    transform: rotate(90deg); /* Rotate to form the second arm */
 }
 
 .navbar-nav>.active>a {
@@ -560,6 +559,26 @@ div.col-sm-4.modal-description{
     overflow-y: auto; 
     text-align:justify;
     font-size: medium;
+    /* margin: 25px; */
+}
+
+div.col-sm-6.modal-description{
+    /* margin:4px, 4px; 
+    padding:4px;  */
+    /* background-color: green;  */
+    /* width: 500px;  */
+    /* height: 500px;  */
+    /* height: {{ size_x | times: 100 }}px;  */
+    min-height: 75vh !important;
+    max-height: 75vh;
+    overflow-x: auto; 
+    overflow-y: auto; 
+    text-align:justify;
+    font-size: medium;
+    direction: ltr;
+    /* display: flex; Enables flexbox for column content */
+    align-items: center; /* Vertically center content inside column */
+    justify-content: center; /* Horizontally center content inside column (optional) */
     /* margin: 25px; */
 }
 

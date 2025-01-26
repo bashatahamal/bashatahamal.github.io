@@ -1,77 +1,81 @@
 <div class="carousel__holder">
-    <div class="carousel">
+  <div class="carousel">
 
-        {% if l > 0 %}
-          {% assign prev_l = l%}
-        {% else %}
-          {% assign prev_l = 0 %}
-        {% endif %}
-        <!-- <div> 
-          prev_l: {{ prev_l }}
-        </div> -->
-
-        {% assign count_a = prev_l %}
-        {% for file in site.static_files %}
-        {% if file.path contains include.folder %}
-        {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' or file.extname == '.png'  %}  
-          <input class="carousel__activator" type="radio" name="carousel" id="{{ count_a }}" />        
-          {% assign count_a = count_a | plus:1 %}
-        {% endif %}
-        {% endif %}
-        {% endfor %}
-        
-        
-        {% assign now = l %}
-        {% assign l = count_a %}
-        
-        {% assign count_b = now %}
-        {% assign length_now = count_a | minus: 1 %}
-        {% for file in site.static_files %}
-        {% if file.path contains include.folder %}
-          {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' or file.extname == '.png'  %}  
-            {% if count_b == length_now %}
-              {% assign nextindex = now %}
-            {% else %}
-              {% assign nextindex = count_b | plus: 1 %}
-            {% endif %}
-            {% assign nextletter = nextindex %}
-            {% if count_b == now %}
-              {% assign previndex = count_a | minus: 1 %}
-            {% else %}
-              {% assign previndex = count_b | minus: 1 %}
-            {% endif %}
-            {% assign prevletter = previndex %}
-            <div class="carousel__controls">
-                <label class="carousel__control carousel__control--backward" for="{{ prevletter }}"></label>
-                <label class="carousel__control carousel__control--forward" for="{{ nextletter }}"></label>
-            </div>
-            {% assign count_b = count_b | plus:1 %}
+      {% if l > 0 %}
+        {% assign prev_l = l %}
+      {% else %}
+        {% assign prev_l = 0 %}
+      {% endif %}
+      
+      {% assign count_a = prev_l %}
+      {% assign image_count = 0 %}
+      {% for file in site.static_files %}
+      {% if file.path contains include.folder %}
+      {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' or file.extname == '.png' %}
+        <input class="carousel__activator" type="radio" name="carousel" id="{{ count_a }}" />
+        {% assign count_a = count_a | plus: 1 %}
+        {% assign image_count = image_count | plus: 1 %}
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      
+      {% assign now = l %}
+      {% assign l = count_a %}
+      
+      {% assign count_b = now %}
+      {% assign length_now = count_a | minus: 1 %}
+      {% for file in site.static_files %}
+      {% if file.path contains include.folder %}
+      {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' or file.extname == '.png' %}
+        {% if image_count > 1 %}
+          {% if count_b == length_now %}
+            {% assign nextindex = now %}
+          {% else %}
+            {% assign nextindex = count_b | plus: 1 %}
           {% endif %}
+          {% assign nextletter = nextindex %}
+          {% if count_b == now %}
+            {% assign previndex = count_a | minus: 1 %}
+          {% else %}
+            {% assign previndex = count_b | minus: 1 %}
+          {% endif %}
+          {% assign prevletter = previndex %}
+          <div class="carousel__controls">
+              <label class="carousel__control carousel__control--backward" for="{{ prevletter }}"></label>
+              <label class="carousel__control carousel__control--forward" for="{{ nextletter }}"></label>
+          </div>
         {% endif %}
-        {% endfor %}
-        <div class="carousel__track">
-          <ul>
-            {% for file in site.static_files %}
-            {% if file.path contains include.folder %}
-            {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' or file.extname == '.png'  %}  
-            <li class="carousel__slide" style="background-image: url('{{ file.path }}');"></li>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="carousel__indicators" id="c{{ post.modal-id }}">
-            {% assign count = prev_l %}
-            {% for file in site.static_files %}
-            {% if file.path contains include.folder %}
-            {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' or file.extname == '.png'  %} 
-              <label class="carousel__indicator" for="{{ count }}"></label>
-            {% assign count = count | plus:1 %}
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-        </div>
-    </div>
+        {% assign count_b = count_b | plus: 1 %}
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      
+      <div class="carousel__track">
+        <ul>
+          {% for file in site.static_files %}
+          {% if file.path contains include.folder %}
+          {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' or file.extname == '.png' %}
+          <li class="carousel__slide" style="background-image: url('{{ file.path }}');"></li>
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      
+      {% if image_count > 1 %}
+      <div class="carousel__indicators" id="c{{ post.modal-id }}">
+          {% assign count = prev_l %}
+          {% for file in site.static_files %}
+          {% if file.path contains include.folder %}
+          {% if file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' or file.extname == '.png' %}
+            <label class="carousel__indicator" for="{{ count }}"></label>
+            {% assign count = count | plus: 1 %}
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+      </div>
+      {% endif %}
+  </div>
 </div>
 
 <style>

@@ -12,7 +12,7 @@ labels:
     - ML & Software Engineer
     - DevOps
 summary: A fashion and lifestyle e-commerce platform & personal styling based on Artificial Intelligence.
-describe-opening: Role -> Machine Learning & Software Engineer, DevOps
+describe-opening: '<strong> Role: </strong> Machine Learning & Software Engineer, DevOps'
 
 describe-content:
     - Developed a user clustering service for better analyzing data.
@@ -36,6 +36,6 @@ describe-content:
     - Built automation task such as selenium testing, Telegram Bot - Jenkins integration (able to send Jenkins command via button Telegram chat group updating images product set on Google Vision, automatic bakcup database, WhatsApp server for sending message via UI automation (web based and windows apps based
 
 
-describe-closing: Tech stack -> Python, Scikit-learn, OpenCV, Numpy, Pandas, Flask, FastAPI, Django, Celery, Rabbit MQ, Postgres, Mongo DB, NodeJS, TypeORM, Typescript, Google Cloud Platform, Amazon Web Services, Google Vision, Kubernetes, Ansible, Terraform, Kubernetes Operations (KOps), Jenkins, Cloudflare, Telegram bot UI, Bitbucket webhook, Selenium, PyWinAuto, Bash Script.
+describe-closing: '<strong> Tools used: </strong> Python, Scikit-learn, OpenCV, Numpy, Pandas, Flask, FastAPI, Django, Celery, Rabbit MQ, Postgres, Mongo DB, NodeJS, TypeORM, Typescript, Google Cloud Platform, Amazon Web Services, Google Vision, Kubernetes, Ansible, Terraform, Kubernetes Operations (KOps), Jenkins, Cloudflare, Telegram bot UI, Bitbucket webhook, Selenium, PyWinAuto, Bash Script.'
 
 ---
