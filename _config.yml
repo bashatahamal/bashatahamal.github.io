@@ -2,15 +2,17 @@
 title: Basha Tahamal
 nickname: Basha
 fullname: M. Hawatif Basharuddin R. T.
-email: m.hawatif.basharuddin@mail.ugm.ac.id
+# email: m.hawatif.basharuddin@mail.ugm.ac.id
+email: bashatahamal@gmail.com
 url: https://github.com/bashatahamal
 description: "Muhammad Hawatif Basharuddin Rabbani Tahammal portfolio web"
 keywords: "Basha, Computer Vison, Machine Learning, Software Engineer"
-skills: "Software Engineer - Machine Learning - Computer Vision - DevOps"
+skills: "Software Engineer - LLM - Machine Learning - Computer Vision - DevOps"
 meta_author: Tahamal Basha
 # about: Hi, my name is Basha, I have a degree in the Department of Computer Science and Electronics, Universitas Gadjah Mada, majoring in Electronics and Instrumentation with cum laude predicate. I can learn things quickly and creatively. I am also a resilient person and an excellent thinker. When working in a team I play most of the role as a leader and as a member I can still contribute with my creative ideas and collaborate effectively. I can adapt to various conditions quickly by always trying to push myself to learn to be better and trying to take initiative. I have an interest in software in general and what I have been researching and working on recently is machine learning, computer vision and some web development. This is just the beginning of what I can do and I believe in my potential to be able to do more and benefit society with the skills I have. 
 # about : Hi, my name is Basha, I have a degree in the Department of Computer Science and Electronics, Universitas Gadjah Mada, majoring in Electronics and Instrumentation with cum laude predicate. I can learn things quickly and creatively. I am also a resilient person and an excellent thinker. When working in a team I play most of the role as a leader and as a member I can still contribute with my creative ideas and collaborate effectively. I can adapt to various conditions quickly by always trying to push myself to learn to be better and trying to take initiative. I have interest on software in general and my latest working experience is on software engineering and development operations. This is just the beginning of what I can do and I believe in my potential to be able to do more !
-about : Hi, my name is Basha, I have a degree in the Department of Computer Science and Electronics, Universitas Gadjah Mada, majoring in Electronics and Instrumentation with cum laude predicate. I can learn things quickly and creatively. I am also a resilient person and an excellent thinker. When working in a team I play most of the role as a leader and as a member I can still contribute with my creative ideas and collaborate effectively. I have interest on software in general and my latest working experience is on machine learning, software engineering and development operations. This is just the beginning of what I can do and I believe in my potential to be able to do more !
+# about : Hi, my name is Basha, I have a degree in the Department of Computer Science and Electronics, Universitas Gadjah Mada, majoring in Electronics and Instrumentation with cum laude predicate. I can learn things quickly and creatively. I am also a resilient person and an excellent thinker. When working in a team I play most of the role as a leader and as a member I can still contribute with my creative ideas and collaborate effectively. I have interest on software in general and my latest working experience is on machine learning, software engineering and development operations. This is just the beginning of what I can do and I believe in my potential to be able to do more !
+about: Hi, my name is Basha! I'm a Software Engineer with years of professional experience specializing in Machine Learning, Software Development, and DevOps. I have a degree from Universitas Gadjah Mada in Electronics and Instrumentation, where I developed a strong foundation in AI and computer vision. Throughout my career, I have successfully led and developed AI-driven applications, including LLM-based conversational assistants, OCR automation, computer vision solutions, and recommendation systems. My expertise spans AI applications, Dev/MLOps, cloud optimization, and AI-driven automation, with a proven track record of enhancing efficiency and reducing operational costs. I am passionate about integrating AI solutions into real-world applications, contributing to industries like aquaculture, cybersecurity, e-commerce, and agribusiness. I thrive in cross-functional teams, leveraging technical expertise, leadership, and innovation to drive impactful and scalable AI solutions.
 
 
 baseurl: ""
@@ -73,8 +75,8 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: Jl. Magelang km 8
-  - line: Sleman, Yogyakarta 55285
+  - line: Sleman
+  - line: Yogyakarta, 55281
 
 # Credits content
 credits: '+6285643755459'
