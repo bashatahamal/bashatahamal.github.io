@@ -4,7 +4,7 @@
 <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
     aria-hidden="true">
     <div class="modal-content" id="m{{post.modal-id}}">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="close-modal hidden-xs hidden-sm" data-dismiss="modal">
                     <div class="lr">
@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <!-- <div class="col-sm-6 modal-description" style="direction: ltr; height: 500px;"> -->
-                            <div class="col-sm-6 modal-description">
+                            <div class="col-sm-6 modal-description" style="padding-left: 6%; padding-right: 2%;">
                                 <!-- <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered"
                                     alt="{{ post.alt }}"> -->
                                 <div style="direction: ltr;">
@@ -37,7 +37,7 @@
                                     <p style="text-indent: 20px; margin-top: 20px;">{{ post.describe-opening | markdownify}}</p>
                                     {% endif %}
     
-                                    <ul style="list-style-type: disc; text-align-last: left;">
+                                    <ul style="list-style-type: disc; text-align-last: left; padding-right: 2%;">
                                         {% for point in post.describe-content %}
                                         <li>{{ point | markdownify }}</li>
                                         {% endfor %}

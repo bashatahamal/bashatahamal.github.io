@@ -468,8 +468,8 @@ footer .footer-below {
 .portfolio-modal .modal-content h2 {
     margin: 0;
     font-size: 2em;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 .portfolio-modal .modal-content img {
@@ -562,11 +562,12 @@ div.col-sm-4.modal-description{
     /* margin: 25px; */
 }
 
-div.col-sm-6.modal-description{
+/* div.col-sm-6.modal-description{ */
+.modal-description{
     /* margin:4px, 4px; 
     padding:4px;  */
     /* background-color: green;  */
-    /* width: 500px;  */
+    width: 100%; /* Full width by default */
     /* height: 500px;  */
     /* height: {{ size_x | times: 100 }}px;  */
     min-height: 75vh !important;
@@ -576,11 +577,39 @@ div.col-sm-6.modal-description{
     text-align:justify;
     font-size: medium;
     direction: ltr;
+    padding-right: 1rem;
+    box-sizing: border-box;
     /* display: flex; Enables flexbox for column content */
     align-items: center; /* Vertically center content inside column */
     justify-content: center; /* Horizontally center content inside column (optional) */
     /* margin: 25px; */
 }
+
+/* Portrait screens */
+@media (orientation: portrait) {
+    /* Styles for portrait mode */
+    .modal-description {
+      width: 96%;
+    }
+  }
+  
+  /* Landscape screens */
+  @media (orientation: landscape) {
+    /* Styles for landscape mode */
+    .modal-description {
+      width: 48%;
+    }
+  }
+  
+
+div.col-sm-6.modal-description::-webkit-scrollbar {
+    width: 8px;
+}
+div.col-sm-6.modal-description::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 4px;
+}
+
 
 .modal-body{
     padding:0%;
