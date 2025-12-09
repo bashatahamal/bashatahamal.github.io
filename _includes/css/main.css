@@ -590,6 +590,7 @@ div.col-sm-4.modal-description{
     /* Styles for portrait mode */
     .modal-description {
       width: 96%;
+      margin: 0 auto;
     }
   }
   
@@ -598,6 +599,43 @@ div.col-sm-4.modal-description{
     /* Styles for landscape mode */
     .modal-description {
       width: 48%;
+      margin: 0 auto;
+    }
+  }
+
+/* Portrait screens */
+@media (orientation: portrait) {
+    /* Styles for portrait mode */
+    .media-on-left {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Landscape screens */
+  @media (orientation: landscape) {
+    /* Styles for landscape mode */
+    .media-on-left {
+      width: 48%;
+      margin: 0 auto;
+    }
+  }
+
+/* Portrait screens */
+@media (orientation: portrait) {
+    /* Styles for portrait mode */
+    .media-on-left-video {
+      width: 90%;
+      margin: 0;
+    }
+  }
+  
+  /* Landscape screens */
+  @media (orientation: landscape) {
+    /* Styles for landscape mode */
+    .media-on-left-video {
+      width: 48%;
+      margin: 0;
     }
   }
   

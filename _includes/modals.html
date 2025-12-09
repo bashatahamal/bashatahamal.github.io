@@ -6,7 +6,8 @@
     <div class="modal-content" id="m{{post.modal-id}}">
         <div class="container-fluid">
             <div class="row">
-                <div class="close-modal hidden-xs hidden-sm" data-dismiss="modal">
+                <!-- <div class="close-modal hidden-xs hidden-sm" data-dismiss="modal"> -->
+                <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
                         </div>
@@ -19,9 +20,9 @@
                             <hr class="star-primary">
                         </div>
                         <div class="row align-items-center">
-                            <div class="col-sm-6"  style="padding-left: 2%; padding-right: 0%;">
+                            <div class="col-sm-6 media-on-left"  style="padding-left: 2%; padding-right: 0%;">
                                 {% include carousel.html height="65" unit="%" folder=post.galleryImg %}
-                                <div class="row-align-items-center" style="padding-left: 0%; padding-right: 0%;">
+                                <div class="row-align-items-center media-on-left-video" style="padding-left: 0%; padding-right: 0%;">
                                     {% if post.videoUrl %}
                                     <!-- <p style="font-weight: 800; margin-top: -5px; margin-bottom: -1em; font-size: large;">
                                         Video</p> -->
