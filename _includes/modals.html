@@ -19,30 +19,51 @@
                             <hr class="star-primary">
                         </div>
                         <div class="row align-items-center">
-                            <div class="col-sm-6">
+                            <div class="col-sm-6"  style="padding-left: 2%; padding-right: 0%;">
                                 {% include carousel.html height="65" unit="%" folder=post.galleryImg %}
-                                <div class="row-align-items-center">
+                                <div class="row-align-items-center" style="padding-left: 0%; padding-right: 0%;">
                                     {% if post.videoUrl %}
-                                    <p style="font-weight: 800; margin-top: -5px; margin-bottom: -1em; font-size: large;">Video</p>
+                                    <!-- <p style="font-weight: 800; margin-top: -5px; margin-bottom: -1em; font-size: large;">
+                                        Video</p> -->
                                     <p>{% include youtubePlayer.html url=post.videoUrl %}</p>
                                     {% endif %}
                                 </div>
                             </div>
                             <!-- <div class="col-sm-6 modal-description" style="direction: ltr; height: 500px;"> -->
-                            <div class="col-sm-6 modal-description" style="padding-left: 6%; padding-right: 2%;">
+                            <div class="col-sm-6 modal-description" style="padding-left: 4%; padding-right: 2%;">
                                 <!-- <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered"
                                     alt="{{ post.alt }}"> -->
                                 <div style="direction: ltr;">
                                     {% if post.describe-opening %}
-                                    <p style="text-indent: 20px; margin-top: 20px;">{{ post.describe-opening | markdownify}}</p>
+                                    <p style="text-indent: 1%; margin-top: 1%;">{{ post.describe-opening |
+                                        markdownify}}</p>
                                     {% endif %}
-    
-                                    <ul style="list-style-type: disc; text-align-last: left; padding-right: 2%;">
+
+                                    <!-- <ul style="list-style-type: disc; text-align-last: left; padding-right: 2%;">
                                         {% for point in post.describe-content %}
                                         <li>{{ point | markdownify }}</li>
                                         {% endfor %}
+                                    </ul> -->
+
+                                    <ul style="list-style-type: disc; text-align-last: left; padding-right: 2%;">
+                                        {% for point in post.describe-content %}
+
+                                        {% if point contains '<strong>' or point contains '<b>' or point contains '<em>'
+                                                    or point contains '<i>' or point contains '<u>' %}
+                                                            <!-- Render as a non-bullet section header -->
+                                                            <li style="list-style-type:none; margin-top:10px;">
+                                                                {{ point | markdownify }}
+                                                            </li>
+
+                                                            {% else %}
+                                                            <!-- Normal bullet point -->
+                                                            <li>{{ point | markdownify }}</li>
+
+                                                            {% endif %}
+
+                                                            {% endfor %}
                                     </ul>
-    
+
                                     {% if post.describe-closing %}
                                     <p>{{ post.describe-closing | markdownify}}</p>
                                     {% endif %}
@@ -74,7 +95,8 @@
 
                         <div class="row align-items-end">
                             <hr class="star-primary">
-                            <button onclick="reload_iframe('v{{ post.modal-id }}')" type="button" class="btn btn-default" data-dismiss="modal"
+                            <button onclick="reload_iframe('v{{ post.modal-id }}')" type="button"
+                                class="btn btn-default" data-dismiss="modal"
                                 style="background-color: #{{ site.color.secondary }}; margin-top: -5px; margin-bottom: 10px">
                                 Close</button>
                         </div>

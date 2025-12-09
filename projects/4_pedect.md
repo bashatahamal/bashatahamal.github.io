@@ -19,12 +19,17 @@ labels:
     - actuator
     - python
 summary: Utilization of object recognition for sidewalk safety on roadblock using real time video processing.
-describe-opening: This project is a student creativity program (PKM) funded by Directorate General of Higher Education, Ministry of National Education (DIKTI) by submitting a proposal with an obligation to make a final report. It is a road block like tool on a pedestrian path that utilizes object detection/realtime video processing using camera (Raspberry Pi 3 + Intel Movidius 2) which function to prevent other than pedestrians and cyclists from entering the area. This project was carried out by three people and the work I did
+# describe-opening: <br>This project is a student creativity program (PKM) funded by Directorate General of Higher Education, Ministry of National Education (DIKTI) by submitting a proposal with an obligation to make a final report. It is a road block like tool on a pedestrian path that utilizes object detection/realtime video processing using camera (Raspberry Pi 3 + Intel Movidius 2) which function to prevent other than pedestrians and cyclists from entering the area. This project was carried out by three people and the work I did
+describe-opening: <br>The project was part of the Student Creativity Program (PKM) funded by the Directorate General of Higher Education (DIKTI) Indonesia. We designed a smart barrier system for pedestrian pathways, using real-time object detection powered by a Raspberry Pi 3 and Intel Movidius Neural Compute Stick 2. The system automatically identifies pedestrians and cyclists while blocking unauthorized vehicles from entering the area. This project was carried out by three people and the work I did
 describe-content:
-    - Leader in the team
-    - Worked on designing the tool and components needed.
-    - Programmer (Python, Intel Movidius NCSDK, Raspberry Pi and others software related).
-    - Designing algorithm and tuning pre-trained Convolutional Neural Network model for object detection.
-describe-closing:
+    # - Leader in the team
+    # - Worked on designing the tool and components needed.
+    # - Programmer (Python, Intel Movidius NCSDK, Raspberry Pi and others software related).
+    # - Designing algorithm and tuning pre-trained Convolutional Neural Network model for object detection.
+    - Served as the team leader, coordinating project development and deliverables.
+    - Designed the hardware concept, component layout, and integration between the barrier mechanism and the vision system.
+    - Developed the software pipeline using Python, OpenCV, and Intel Movidius NCSDK.
+    - Designed detection logic and tuned a pre-trained Convolutional Neural Network model for accurate real-time object classification.
+describe-closing: <strong>Tools Used:</strong> Python, Tensorflow, OpenCV, Raspberry Pi, Intel Movidius, NCSDK
 
 ---

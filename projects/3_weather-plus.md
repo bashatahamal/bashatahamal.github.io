@@ -30,6 +30,6 @@ describe-content:
     - Worked on designing and making data communication between the device created with the database on a local wireless computer using wifi (C++, mysql, PHP).
     - Worked on designing the enclosure of the tools using acrylic (CorelDraw).
     - Collaborated on hardware programming (ESP32).
-describe-closing:
+describe-closing: <strong>Tools Used:</strong> C++, ESP32, PHP, MySQL, Javascript, Ajax, HTML/CSS, Corel Draw
 
 ---
