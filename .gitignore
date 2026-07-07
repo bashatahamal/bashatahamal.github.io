@@ -1,9 +1,45 @@
+# OS Files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
 
-_site
-.sass-cache
-.jekyll-cache
+# IDE & Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.atom/
+.nvim/
+*.swc
+*.swa
+*.sublime-settings
+.editorconfig
+
+# Environment & Dependencies
+.env
+.env.local
+.env.*.local
+node_modules/
+package-lock.json
+yarn.lock
+.bundle/
+vendor/
+
+# Jekyll & Build
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
-
 Gemfile.lock
+
+# Project Specific
 temp/
+*.log
+.local/
