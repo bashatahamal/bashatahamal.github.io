@@ -602,7 +602,7 @@ a.m-timeline-card:hover .view { opacity: 1; transform: translateX(0); color: var
 /* Medium-style single readable column: header, gallery, video, and prose
    all share the same width and left edge (no full-width media vs narrow text). */
 .p-project { padding: clamp(2.5rem, 6vh, 4rem) 0; }
-.p-project .container { max-width: 760px; }
+.p-project .container { max-width: 820px; }
 .p-project .back {
   font-family: var(--sans);
   font-size: 0.85rem;
@@ -624,12 +624,16 @@ a.m-timeline-card:hover .view { opacity: 1; transform: translateX(0); color: var
 }
 .p-project .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
   margin: 0 0 2.25rem;
 }
+.p-project .gallery--1 { grid-template-columns: minmax(0, 360px); }
+.p-project .gallery--2 { grid-template-columns: repeat(2, 1fr); }
+.p-project .gallery--3 { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 560px) {
-  .p-project .gallery { grid-template-columns: repeat(2, 1fr); }
+  .p-project .gallery--1 { grid-template-columns: 1fr; }
+  .p-project .gallery--2,
+  .p-project .gallery--3 { grid-template-columns: repeat(2, 1fr); }
 }
 .p-project .gallery-item {
   display: block;

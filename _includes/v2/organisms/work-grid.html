@@ -1,7 +1,7 @@
 <section class="o-work" id="work" aria-labelledby="work-title">
   <div class="container">
-    {% include v2/atoms/section-heading.html num="01" id="work" title="Things I've Built" %}
-    <p class="section-intro">A running record of what I've built, newest first, from student experiments to production AI systems. It's less a highlight reel and more a map of how I got here.</p>
+    {% include v2/atoms/section-heading.html num="01" id="work" title="How I Got Here" %}
+    <p class="section-intro">Newest first, from early student experiments to production AI systems. Not a highlight reel, more an honest record of how I've grown as an engineer.</p>
     <div class="grid">
       {% assign project_pages = site.pages | where: "type", "project" | sort: "name" | reverse %}
       {% for page in project_pages %}
