@@ -1,6 +1,7 @@
 <section class="o-work" id="work" aria-labelledby="work-title">
   <div class="container">
-    {% include v2/atoms/section-heading.html num="01" id="work" title="Selected Work" %}
+    {% include v2/atoms/section-heading.html num="01" id="work" title="Things I've Built" %}
+    <p class="section-intro">A running record of what I've built, newest first, from student experiments to production AI systems. It's less a highlight reel and more a map of how I got here.</p>
     <div class="grid">
       {% assign project_pages = site.pages | where: "type", "project" | sort: "name" | reverse %}
       {% for page in project_pages %}
@@ -9,6 +10,5 @@
         {% endunless %}
       {% endfor %}
     </div>
-    <p class="grid-note">Each card opens a detail page with the full story, gallery, and tools used.</p>
   </div>
 </section>

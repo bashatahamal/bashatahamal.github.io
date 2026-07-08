@@ -10,18 +10,9 @@ galleryImg: /images/tajweed-rule
 videoUrl: https://drive.google.com/file/d/1ZP2N09kOzt2V6csJlu4NogLvtbJfZf7L/preview?resourcekey=null
 date: April - September 2020
 labels:
-    - computer vision
-    - image processing
+    - Computer Vision
     - OCR
     - CNN
-    - dataset
-    - python
-    - tensorflow
-    - pytorch
-    - web
-    - flask
-    - javascript
-    - html/css
 summary: Document processing using image of Quran verse for recognizing the tajweed rules type and it's location.
 # describe-opening: <br>This project was my final project of my undergraduate studies at Universitas Gadjah Mada, majoring in Electronics and Instrumentation, Department of Computer Science and Electronics. The aim of my final project is to develop a method for recognizing the reading law contained in the verses of the Quran with input in the form of images and to create a web-based user interface to display the results of each process. This project consists of the following work
 describe-opening: <br>This project was my undergraduate final project at Universitas Gadjah Mada, majoring in Electronics and Instrumentation (Department of Computer Science and Electronics). The goal was to develop a method for recognizing Quranic reading laws from verse images and to build a web-based interface to display each step of the processing pipeline. This project consists of the following work

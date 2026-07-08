@@ -9,10 +9,9 @@ image: images/thumbnails/road-damage.jpg
 galleryImg: /images/road-damage
 date: July 2020
 labels:
-    - deep learning
-    - image processing
-    - python
-    - tensorflow
+    - Deep Learning
+    - Image Segmentation
+    - PyTorch
 summary: Road damage detection with an output of binary image and road damage recognition with an output of bounding box and it's type of class. 
 describe-opening: <br>
 describe-content:

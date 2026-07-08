@@ -1,21 +1,23 @@
 # Experience timeline. Keep in sync with cv_docs/cv/latest/main.tex (see REDESIGN.md section 4)
 - company: Berning
   role: Software Engineer, AI Systems
-  period: January 2026 - Present
+  period: January 2026 - July 2026
   location: Remote
-  current: true
+  recent: true
   summary: >
-    Building Leadflow, an AI-powered lead generation platform with automated
+    Built Leadflow, an AI-powered lead generation platform with automated
     lead ingestion and enrichment, multi-client LLM scoring pipelines, and
-    AI-driven personalized outreach. Built with FastAPI, PostgreSQL, Redis,
-    and LLM orchestration end to end.
+    AI-driven personalized outreach. FastAPI, PostgreSQL, Redis, and LLM
+    orchestration end to end.
 
 - company: Career break
   role: Wedding & relocation
   period: June 2025 - December 2025
   location: Indonesia
   summary: >
-    Time off for my wedding and relocation, back to work since January 2026.
+    A deliberate pause to get married and relocate to Cikarang. I used the
+    downtime to keep sharp, following where LLM agents and tooling were
+    heading, and came back to work in January 2026.
 
 - company: HDCE Inc. (TIB Finance)
   role: AI Engineer
