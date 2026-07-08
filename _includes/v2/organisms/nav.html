@@ -1,0 +1,14 @@
+<nav class="o-nav" aria-label="Main">
+  <div class="container inner">
+    <a class="brand" href="{{ site.baseurl }}/#top">{{ site.nickname }}<span class="dot">.</span></a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-menu">Menu</button>
+    <ul id="nav-menu" data-nav-menu>
+      <li><a href="{{ site.baseurl }}/#work">Work</a></li>
+      <li><a href="{{ site.baseurl }}/#experience">Experience</a></li>
+      <li><a href="{{ site.baseurl }}/#about">About</a></li>
+      <li><a href="{{ site.baseurl }}/#writing">Writing</a></li>
+      <li><a href="{{ site.baseurl }}/#contact">Contact</a></li>
+    </ul>
+    {% include v2/atoms/theme-toggle.html %}
+  </div>
+</nav>

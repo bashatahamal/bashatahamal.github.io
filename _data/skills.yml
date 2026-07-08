@@ -1,0 +1,9 @@
+# Skill groups. Keep in sync with CV Skills section
+- group: AI / ML
+  items: [LLM apps & agents, RAG, LangChain / LangGraph, Computer Vision, OCR, NLP, Speech, Recommendation Systems]
+- group: Backend
+  items: [Python, FastAPI, Flask, Django, TypeScript / Node.js, Microservices, RabbitMQ / Celery, PostgreSQL, MongoDB, VectorDB, Redis]
+- group: DevOps & Cloud
+  items: [AWS, GCP, Azure, Docker, Kubernetes, Nomad, Terraform, Ansible, Jenkins, CI/CD]
+- group: Tooling
+  items: [PyTorch, TensorFlow, Hugging Face, OpenAI, Ollama, Langfuse / LangSmith, Pandas, OpenCV, Grafana]

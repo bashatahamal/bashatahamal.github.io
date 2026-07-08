@@ -1,8 +1,79 @@
 ---
-layout: projects
+layout: v2
 ---
 
-<div style="margin-top: 20px; margin-bottom: 20px" class="ui text container">
- <h1>{{ page.title }}</h1>
- {{ content }}
-</div>
+<article class="p-project">
+  <div class="container">
+    <a class="back" href="{{ site.baseurl }}/#work">&larr; Back to work</a>
+
+    <header>
+      <span class="a-kicker">{{ page.date }}</span>
+      <h1>{{ page.title }}</h1>
+      <div class="meta-row">
+        {% for label in page.labels %}<span class="a-tag a-tag--accent">{{ label }}</span>{% endfor %}
+      </div>
+    </header>
+
+    {% if page.galleryImg %}
+      {% assign gallery_prefix = page.galleryImg | append: "/" %}
+      {% assign gallery_files = site.static_files | where_exp: "f", "f.path contains gallery_prefix" %}
+      {% if gallery_files.size > 0 %}
+      {% assign gallery_total = gallery_files.size %}
+      <div class="gallery" data-lightbox>
+        {% for f in gallery_files %}
+        <button type="button" class="gallery-item"
+          {% if gallery_total > 3 and forloop.index == 3 %}data-more="+{{ gallery_total | minus: 3 }}"{% endif %}
+          {% if forloop.index > 3 %}hidden{% endif %}
+          aria-label="View image {{ forloop.index }} of {{ gallery_total }} full screen">
+          <img src="{{ site.baseurl }}{{ f.path }}" alt="{{ page.title | strip_html }} - image {{ forloop.index }}" loading="lazy">
+        </button>
+        {% endfor %}
+      </div>
+
+      <dialog class="lightbox" aria-label="Image viewer">
+        <button type="button" class="lb-close" data-lb-close aria-label="Close viewer">&times;</button>
+        <button type="button" class="lb-arrow lb-prev" data-lb-prev aria-label="Previous image">&larr;</button>
+        <figure>
+          <img class="lb-img" src="" alt="">
+          <figcaption class="lb-counter a-kicker"></figcaption>
+        </figure>
+        <button type="button" class="lb-arrow lb-next" data-lb-next aria-label="Next image">&rarr;</button>
+      </dialog>
+      {% endif %}
+    {% endif %}
+
+    {% if page.videoUrl %}
+    <div class="video">
+      <iframe src="{{ page.videoUrl }}" title="{{ page.title | strip_html }} video" allowfullscreen loading="lazy"></iframe>
+    </div>
+    {% elsif page.youtubeId %}
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/{{ page.youtubeId }}" title="{{ page.title | strip_html }} video" allowfullscreen loading="lazy"></iframe>
+    </div>
+    {% endif %}
+
+    <div class="prose">
+      {% if page.describe-opening %}
+        <p>{{ page.describe-opening | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% endif %}
+
+      {% if page.describe-content %}
+      <ul>
+        {% for line in page.describe-content %}
+          {% if line contains "<strong>" or line contains "<em>" %}
+          <li class="group-head">{{ line }}</li>
+          {% else %}
+          <li>{{ line }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {{ content }}
+
+      {% if page.describe-closing %}
+      <p class="tools">{{ page.describe-closing }}</p>
+      {% endif %}
+    </div>
+  </div>
+</article>
