@@ -92,4 +92,5 @@ defaults:
       path: ""
       type: "posts"
     values:
-      permalink: ""
+      layout: "post"
+      permalink: /writing/:title/

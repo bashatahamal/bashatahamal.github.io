@@ -1,6 +1,21 @@
 <section class="o-writing" id="writing" aria-labelledby="writing-title">
   <div class="container">
     {% include v2/atoms/section-heading.html num="04" id="writing" title="Writing" %}
+    {% if site.posts.size > 0 %}
+    <ul class="post-list">
+      {% for post in site.posts limit: 2 %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <span class="a-kicker">{{ post.date | date: "%B %-d, %Y" }}</span>
+          <h2>{{ post.title }}</h2>
+          {% if post.excerpt %}<p>{{ post.excerpt | strip_html }}</p>{% endif %}
+          <span class="read">Read &rarr;</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="grid-note"><a href="{{ site.baseurl }}/writing/">All writing &rarr;</a></p>
+    {% else %}
     <div class="soon">
       <span class="a-kicker">Coming soon</span>
       <p>
@@ -9,5 +24,6 @@
         posts are in the works.
       </p>
     </div>
+    {% endif %}
   </div>
 </section>

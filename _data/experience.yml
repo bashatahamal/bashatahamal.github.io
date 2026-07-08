@@ -4,6 +4,7 @@
   period: January 2026 - July 2026
   location: Remote
   recent: true
+  link: /projects/berning
   summary: >
     Built Leadflow, an AI-powered lead generation platform with automated
     lead ingestion and enrichment, multi-client LLM scoring pipelines, and
