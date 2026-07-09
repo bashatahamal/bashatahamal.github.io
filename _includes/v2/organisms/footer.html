@@ -8,14 +8,19 @@
     </div>
     <div class="meta">
       <span>© {{ site.time | date: "%Y" }} {{ site.title }} · Yogyakarta / Bekasi, Indonesia</span>
-      <!-- Credit line alternatives (swap the text below, keep the Source link):
-           "Made with Jekyll, Claude, and strong opinions"   <- current
+      <!-- Credit line with hover easter egg: default text cross-fades to the
+           wink on hover (desktop only; touch devices just see the default).
+           Other alternatives if the wording ever changes:
            "Directed by me, typed by Claude, served by Jekyll"
            "Built by me and my favorite pair programmer, Claude"
-           "An AI engineer's site, so yes, an AI helped build it"
-           "Built with Jekyll and Claude"                    <- plain honest
+           "Built with Jekyll and Claude"
       -->
-      <span>Made with Jekyll, Claude, and strong opinions · <a href="https://github.com/bashatahamal/bashatahamal.github.io" target="_blank" rel="noopener">Source</a></span>
+      <span class="credit">
+        <span class="credit-swap">
+          <span class="credit-default">Made with Jekyll, Claude, and strong opinions</span>
+          <span class="credit-alt" aria-hidden="true">An AI engineer's site, so yes, an AI helped build it</span>
+        </span>
+        · <a href="https://github.com/bashatahamal/bashatahamal.github.io" target="_blank" rel="noopener">Source</a></span>
     </div>
   </div>
 </footer>

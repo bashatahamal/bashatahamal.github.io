@@ -609,6 +609,29 @@ a.m-timeline-card:hover .view { opacity: 1; transform: translateX(0); color: var
 }
 .o-footer .meta a { color: inherit; }
 
+/* credit-line easter egg: hovering the text cross-fades to the wink.
+   Both lines stack in one grid cell so nothing jumps; the cell reserves
+   the width of the longer line, right-aligned against "· Source". */
+.o-footer .credit-swap {
+  display: inline-grid;
+  justify-items: end;
+  vertical-align: bottom;
+}
+.o-footer .credit-swap > span {
+  grid-area: 1 / 1;
+  white-space: nowrap;
+  transition: opacity 180ms ease;
+}
+.o-footer .credit-alt { opacity: 0; }
+.o-footer .credit-swap:hover .credit-default { opacity: 0; }
+.o-footer .credit-swap:hover .credit-alt { opacity: 1; }
+@media (hover: none), (max-width: 720px) {
+  /* touch devices can't hover; show only the default, allow wrapping */
+  .o-footer .credit-swap { display: inline; }
+  .o-footer .credit-swap > span { white-space: normal; }
+  .o-footer .credit-alt { display: none; }
+}
+
 /* ------------------------------------------------------- project detail page */
 /* Medium-style single readable column: header, gallery, video, and prose
    all share the same width and left edge (no full-width media vs narrow text). */
