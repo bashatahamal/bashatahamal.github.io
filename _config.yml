@@ -97,7 +97,7 @@ credits: '+6285643755459'
 # Build settings
 markdown: kramdown
 permalink: pretty
-exclude: [REDESIGN.md, README.md, docs, temp, Dockerfile, docker-compose.yml, Rakefile, Gemfile, Gemfile.lock, freelancer-theme-jekyll.gemspec, LICENCE]
+exclude: [REDESIGN.md, README.md, CLAUDE.md, docs, scripts, temp, Dockerfile, docker-compose.yml, Rakefile, Gemfile, Gemfile.lock, freelancer-theme-jekyll.gemspec, LICENCE]
 
 #for posts
 defaults:
