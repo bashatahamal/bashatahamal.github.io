@@ -6,7 +6,7 @@
       <li><a href="{{ site.baseurl }}/#work">Work</a></li>
       <li><a href="{{ site.baseurl }}/#experience">Experience</a></li>
       <li><a href="{{ site.baseurl }}/#about">About</a></li>
-      <li><a href="{{ site.baseurl }}/#writing">Writing</a></li>
+      {% if site.show_writing %}<li><a href="{{ site.baseurl }}/#writing">Writing</a></li>{% endif %}
       <li><a href="{{ site.baseurl }}/#contact">Contact</a></li>
     </ul>
     {% include v2/atoms/theme-toggle.html %}

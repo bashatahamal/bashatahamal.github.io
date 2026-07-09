@@ -8,7 +8,7 @@ summary: Notes from building AI systems in production.
 <section class="o-writing" style="min-height: 60vh;">
   <div class="container">
     {% include v2/atoms/section-heading.html num="01" id="writing-page" title="Writing" %}
-    {% if site.posts.size > 0 %}
+    {% if site.show_writing and site.posts.size > 0 %}
     <p class="section-intro">Notes from building AI systems in production: LLM cost engineering, agent architectures, and lessons from shipping real products.</p>
     <ul class="post-list">
       {% for post in site.posts %}

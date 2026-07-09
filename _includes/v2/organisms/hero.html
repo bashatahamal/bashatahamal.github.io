@@ -3,7 +3,9 @@
     <div class="lead">
       <span class="a-kicker">Software Engineer · AI / LLM Systems</span>
       <h1>Basha Tahamal</h1>
-      <p class="status"><span class="dot" aria-hidden="true"></span> Open to new roles</p>
+      {% if site.availability.show %}
+      <p class="status status--{{ site.availability.tone | default: 'open' }}"><span class="dot" aria-hidden="true"></span> {{ site.availability.text }}</p>
+      {% endif %}
       <p class="lede">
         I build AI systems that make it to production: LLM applications, agents
         and RAG pipelines, computer vision, and the MLOps that keeps them fast

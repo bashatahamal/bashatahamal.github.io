@@ -502,6 +502,17 @@ a.m-timeline-card:hover .view { opacity: 1; transform: translateX(0); color: var
   background: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-wash);
 }
+/* availability tones, set via _config.yml (availability.tone) */
+.o-hero .status--busy { color: var(--gold); }
+.o-hero .status--busy .dot {
+  background: var(--gold);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 15%, transparent);
+}
+.o-hero .status--quiet { color: var(--ink-faint); }
+.o-hero .status--quiet .dot {
+  background: var(--ink-faint);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ink-faint) 15%, transparent);
+}
 .o-hero .lede {
   font-size: clamp(1.1rem, 2vw, 1.28rem);
   color: var(--ink);

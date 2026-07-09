@@ -1,3 +1,16 @@
+# ---- Site switches (how-to: docs/site-settings.md) ----
+
+# Availability chip in the hero. Change text/tone here, no HTML needed.
+# tone: open (green dot) | busy (gold dot) | quiet (gray dot)
+availability:
+  show: true
+  text: Open to new roles
+  tone: open
+
+# Writing section. false = hidden everywhere (homepage section, nav link,
+# /writing/ page shows "coming soon"). Flip to true when ready to publish.
+show_writing: false
+
 # Site settings
 title: Basha Tahamal
 nickname: Basha

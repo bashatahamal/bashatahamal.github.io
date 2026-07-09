@@ -8,6 +8,8 @@ A practical guide to editing bashatahamal.github.io. The site is **Jekyll** (sta
 - [Add or edit a blog post](add-blog-post.md)
 - [Add or edit a project card](add-project-card.md)
 - [Add or edit an experience entry](add-experience.md)
+- [Site settings: availability chip + writing toggle](site-settings.md)
+- [Analysis: what's left and what's worth doing](recommendations.md)
 
 ## How the template system fits together
 
