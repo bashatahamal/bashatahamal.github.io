@@ -20,7 +20,7 @@ availability:
 | `tone` | The dot color and text color: `open` = green (available), `busy` = gold (employed but listening), `quiet` = neutral text with no dot (not looking). |
 
 Examples for different life stages:
-- Job hunting: `text: Open to new roles`, `tone: open`
+- Actively looking: `text: Open to new roles`, `tone: open`
 - Employed, open to interesting offers: `text: Open to interesting problems`, `tone: busy`
 - Heads-down at a job: `show: false` (or `text: Building at CompanyName`, `tone: quiet`)
 
