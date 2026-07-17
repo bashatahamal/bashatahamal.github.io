@@ -56,8 +56,12 @@ describe-closing: '<strong>Tools used:</strong> Python, FastAPI, Postgres, etc.'
 | `describe-content` | page body | A list. Lines containing `<strong>` or `<em>` render as headings; every other line is a bullet. |
 | `describe-closing` | page footer line | Usually the "Tools used" line. |
 | `galleryImg` | image gallery | Optional. See [Galleries](#galleries). |
+| `galleryCaption` | mono caption under the gallery | Optional. Short, factual. |
 | `videoUrl` or `youtubeId` | embedded video | Optional. `youtubeId` is just the ID; `videoUrl` is a full embed URL. |
-| `draft: true` | hide it | Optional. Keeps the file but removes it from the grid (used for the Career Break). |
+| `heroImg` | hero media | Optional. Path to the project's single strongest image; renders full-column right under the header (design-system pattern). Clicking opens the lightbox. |
+| `videoPoster` | hero video poster | Optional. Path to a poster image; renders in the hero position with a play button, and clicking swaps in the `videoUrl`/`youtubeId` player (video never autoplays). |
+| `heroCaption` | mono caption under the hero media | Optional. Short, factual, e.g. "Leadflow pipeline overview". |
+| `draft: true` | hide it | Optional. Keeps the file but removes it from the grid (used for the Career Break). Central alternative: `hidden_projects` in `_config.yml` ([site-settings.md](site-settings.md)). |
 
 ## Thumbnails
 - Put the file in `images/thumbnails/` and point `image:` at it.

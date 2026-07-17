@@ -14,6 +14,30 @@ layout: v2
       </div>
     </header>
 
+    {% comment %} Hero media (design-system pattern): the page's strongest single
+    asset, full column, right under the header. Set heroImg (image path) OR
+    videoPoster (poster image path, plays videoUrl/youtubeId on click) in the
+    project's front matter; optional heroCaption renders in mono below. {% endcomment %}
+    {% if page.videoPoster %}
+    <div class="hero-media">
+      <button type="button" class="video-poster"
+        data-video-src="{% if page.videoUrl %}{{ page.videoUrl }}{% elsif page.youtubeId %}https://www.youtube.com/embed/{{ page.youtubeId }}?autoplay=1{% endif %}"
+        aria-label="Play video">
+        <img src="{{ site.baseurl }}/{{ page.videoPoster }}" alt="{{ page.title | strip_html }} video poster">
+        <span class="play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5v13l11-6.5z"></path></svg></span>
+      </button>
+    </div>
+    {% elsif page.heroImg %}
+    <div class="hero-media" data-lightbox>
+      <button type="button" class="gallery-item" aria-label="View image full screen">
+        <img src="{{ site.baseurl }}/{{ page.heroImg }}" alt="{{ page.title | strip_html }} - hero image">
+      </button>
+    </div>
+    {% endif %}
+    {% if page.heroCaption %}{% if page.videoPoster or page.heroImg %}
+    <span class="media-caption">{{ page.heroCaption }}</span>
+    {% endif %}{% endif %}
+
     {% if page.galleryImg %}
       {% assign gallery_prefix = page.galleryImg | append: "/" %}
       {% assign gallery_files = site.static_files | where_exp: "f", "f.path contains gallery_prefix" %}
@@ -31,7 +55,13 @@ layout: v2
         </button>
         {% endfor %}
       </div>
+      {% if page.galleryCaption %}
+      <span class="media-caption">{{ page.galleryCaption }}</span>
+      {% endif %}
+      {% endif %}
+    {% endif %}
 
+    {% if page.heroImg or page.galleryImg %}
       <dialog class="lightbox" aria-label="Image viewer">
         <button type="button" class="lb-close" data-lb-close aria-label="Close viewer">&times;</button>
         <button type="button" class="lb-arrow lb-prev" data-lb-prev aria-label="Previous image">&larr;</button>
@@ -41,9 +71,9 @@ layout: v2
         </figure>
         <button type="button" class="lb-arrow lb-next" data-lb-next aria-label="Next image">&rarr;</button>
       </dialog>
-      {% endif %}
     {% endif %}
 
+    {% unless page.videoPoster %}
     {% if page.videoUrl %}
     <div class="video">
       <iframe src="{{ page.videoUrl }}" title="{{ page.title | strip_html }} video" allowfullscreen loading="lazy"></iframe>
@@ -53,6 +83,7 @@ layout: v2
       <iframe src="https://www.youtube.com/embed/{{ page.youtubeId }}" title="{{ page.title | strip_html }} video" allowfullscreen loading="lazy"></iframe>
     </div>
     {% endif %}
+    {% endunless %}
 
     <div class="prose">
       {% if page.describe-opening %}

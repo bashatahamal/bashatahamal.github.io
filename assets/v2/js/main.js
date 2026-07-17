@@ -15,9 +15,17 @@
     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
 
+  // iOS Safari only applies :active (pressed) states when a touch listener exists.
+  document.addEventListener("touchstart", function () {}, { passive: true });
+
+  var themeFadeTimer;
   document.addEventListener("click", function (e) {
     var toggle = e.target.closest("[data-theme-toggle]");
     if (toggle) {
+      // .theme-fade makes the palette swap a 200ms cross-fade (see main.css).
+      root.classList.add("theme-fade");
+      clearTimeout(themeFadeTimer);
+      themeFadeTimer = setTimeout(function () { root.classList.remove("theme-fade"); }, 280);
       var next = currentTheme() === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
       try { localStorage.setItem("theme", next); } catch (err) {}
@@ -82,5 +90,107 @@
       if (e.key === "ArrowLeft") show(current - 1);
       if (e.key === "ArrowRight") show(current + 1);
     });
+  }
+
+  // Video poster: click swaps the poster for the real iframe (never autoplay
+  // before the click; the src carries autoplay=1 so playback starts on tap).
+  document.addEventListener("click", function (e) {
+    var poster = e.target.closest(".video-poster[data-video-src]");
+    if (!poster || !poster.dataset.videoSrc) return;
+    var wrap = document.createElement("div");
+    wrap.className = "video";
+    var frame = document.createElement("iframe");
+    frame.src = poster.dataset.videoSrc;
+    frame.title = "Video";
+    frame.setAttribute("allowfullscreen", "");
+    frame.setAttribute("allow", "autoplay");
+    wrap.appendChild(frame);
+    poster.replaceWith(wrap);
+  });
+
+  // Post mini-TOC: left rail, wide screens only, built from h2 headings.
+  // Only long posts get one (3+ sections); short posts stay chrome-free.
+  var postContainer = document.querySelector(".post .container");
+  var postBody = document.querySelector(".post .post-body");
+  if (postContainer && postBody) {
+    var heads = Array.prototype.slice.call(postBody.querySelectorAll("h2[id]"));
+    if (heads.length >= 3) {
+      var toc = document.createElement("aside");
+      toc.className = "post-toc";
+      toc.setAttribute("aria-label", "On this page");
+      var inner = document.createElement("div");
+      var label = document.createElement("p");
+      label.className = "toc-label";
+      label.textContent = "On this page";
+      inner.appendChild(label);
+      var list = document.createElement("ol");
+      var links = heads.map(function (h) {
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = "#" + h.id;
+        a.textContent = h.textContent;
+        li.appendChild(a);
+        list.appendChild(li);
+        return a;
+      });
+      inner.appendChild(list);
+      toc.appendChild(inner);
+      postContainer.insertBefore(toc, postBody);
+
+      var currentIdx = -1;
+      function spy() {
+        var cur = 0;
+        heads.forEach(function (h, k) {
+          if (h.getBoundingClientRect().top < 120) cur = k;
+        });
+        if (cur !== currentIdx) {
+          currentIdx = cur;
+          links.forEach(function (a, k) {
+            a.classList.toggle("is-current", k === cur);
+          });
+        }
+      }
+      window.addEventListener("scroll", spy, { passive: true });
+      spy();
+    }
+  }
+
+  // Mermaid diagrams: ```mermaid fences in a post render client-side into SVG.
+  // The library is only fetched (CDN) on pages that actually contain one.
+  var mermaidNodes = Array.prototype.slice.call(
+    document.querySelectorAll(".post-body .language-mermaid")
+  ).map(function (el) {
+    var code = el.querySelector("code") || el;
+    var pre = document.createElement("pre");
+    pre.className = "mermaid";
+    pre.dataset.mermaidSrc = code.textContent;
+    pre.textContent = code.textContent;
+    var container = el.closest(".highlighter-rouge") || el;
+    container.replaceWith(pre);
+    return pre;
+  });
+
+  if (mermaidNodes.length) {
+    var mermaidScript = document.createElement("script");
+    mermaidScript.src = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js";
+    mermaidScript.onload = function () {
+      function renderMermaid() {
+        mermaidNodes.forEach(function (n) {
+          n.removeAttribute("data-processed");
+          n.textContent = n.dataset.mermaidSrc;
+        });
+        window.mermaid.initialize({
+          startOnLoad: false,
+          securityLevel: "strict",
+          theme: currentTheme() === "dark" ? "dark" : "neutral",
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        });
+        window.mermaid.run({ nodes: mermaidNodes });
+      }
+      renderMermaid();
+      // Diagrams re-render when the theme toggle flips data-theme.
+      new MutationObserver(renderMermaid).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+    };
+    document.head.appendChild(mermaidScript);
   }
 })();

@@ -17,7 +17,7 @@ availability:
 |---|---|
 | `show` | `false` hides the chip entirely. |
 | `text` | The label. Keep it short (2-5 words). |
-| `tone` | The dot color and text color: `open` = green (available), `busy` = gold (employed but listening), `quiet` = gray (not looking). |
+| `tone` | The dot color and text color: `open` = green (available), `busy` = gold (employed but listening), `quiet` = neutral text with no dot (not looking). |
 
 Examples for different life stages:
 - Job hunting: `text: Open to new roles`, `tone: open`
@@ -34,3 +34,20 @@ show_writing: false
 - `true`: homepage shows the 2 newest posts, nav gets the Writing link, `/writing/` lists everything.
 
 Flip it to `true` when you're ready to publish. Posts don't need any changes; the toggle only controls visibility.
+
+## Hidden work cards
+
+```yaml
+hidden_projects: []
+```
+
+Hide a work card while its content (card data, screenshots, detail page) is still in progress, so an unfinished project never blocks publishing a design update. List project slugs, which are the last part of the project's permalink (`projects/berning` -> `berning`):
+
+```yaml
+hidden_projects: [berning, wedding]
+```
+
+- The card disappears from the "How I Got Here" grid.
+- The detail page still renders at its direct URL (existing links keep working) but gets a `noindex` meta tag so search engines drop it.
+- To remove a project's page from the built site entirely, add `published: false` to that project file's front matter instead.
+- Related: `draft: true` in a project's front matter also hides just the card (older per-file mechanism, still supported).

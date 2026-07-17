@@ -4,7 +4,7 @@
       <span class="a-kicker">Software Engineer · AI / LLM Systems</span>
       <h1>Basha Tahamal</h1>
       {% if site.availability.show %}
-      <p class="status status--{{ site.availability.tone | default: 'open' }}"><span class="dot" aria-hidden="true"></span> {{ site.availability.text }}</p>
+      <p class="a-status a-status--{{ site.availability.tone | default: 'open' }}"><span class="dot" aria-hidden="true"></span> {{ site.availability.text }}</p>
       {% endif %}
       <p class="lede">
         I build AI systems that make it to production: LLM applications, agents
@@ -25,6 +25,6 @@
         {% include v2/atoms/social-links.html %}
       </div>
     </div>
-    <img class="portrait" src="{{ site.baseurl }}/img/profile.png" alt="Portrait of Basha Tahamal" width="220" height="220">
+    <img class="portrait" src="{{ site.baseurl }}/img/profile.jpg" alt="Portrait of Basha Tahamal" width="220" height="220">
   </div>
 </header>

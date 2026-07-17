@@ -2,6 +2,7 @@
 layout: post
 title: "How we cut our LLM serving costs by around 80%"
 date: 2026-07-09
+tags: [LLM, Infrastructure, Cost]
 excerpt: "The levers that actually moved the bill when we took LLM features from demo to production: right-sizing the model, cutting wasted tokens, caching, and measuring cost per feature."
 ---
 

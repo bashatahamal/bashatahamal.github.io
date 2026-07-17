@@ -5,7 +5,8 @@
     <div class="grid">
       {% assign project_pages = site.pages | where: "type", "project" | sort: "name" | reverse %}
       {% for page in project_pages %}
-        {% unless page.draft %}
+        {% assign project_slug = page.permalink | split: "/" | last %}
+        {% unless page.draft or site.hidden_projects contains project_slug %}
           {% include v2/molecules/project-card.html page=page %}
         {% endunless %}
       {% endfor %}
