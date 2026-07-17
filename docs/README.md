@@ -2,7 +2,7 @@
 
 A practical guide to editing bashatahamal.github.io. The site is **Jekyll** (static site generator) using a small, framework-free template system. You edit content in a few predictable places and Jekyll rebuilds the HTML.
 
-> Writing/design rules live in the repo's [REDESIGN.md](../REDESIGN.md) §2. The one you'll break most often: **never use em dashes (—) or en dashes (–) in copy.** Use commas, periods, colons, parentheses, or plain hyphens for dates.
+> Writing rules, in short: plain first-person voice, sentence case, and **never use em dashes (—) or en dashes (–) in copy.** Use commas, periods, colons, parentheses, or plain hyphens for dates.
 
 ## "I want to change..." (start here)
 
@@ -10,6 +10,7 @@ A practical guide to editing bashatahamal.github.io. The site is **Jekyll** (sta
 |---|---|---|
 | Availability chip ("Open to new roles") | `_config.yml` → `availability:` | [site-settings.md](site-settings.md) |
 | Show/hide the Writing section | `_config.yml` → `show_writing:` | [site-settings.md](site-settings.md) |
+| Hide an unfinished work card | `_config.yml` → `hidden_projects:` | [site-settings.md](site-settings.md) |
 | Hero headline, intro, proof paragraph | `_includes/v2/organisms/hero.html` | plain HTML, edit the text |
 | About text | `_includes/v2/organisms/about.html` | plain HTML, edit the text |
 | Skills lists | `_data/skills.yml` | [add-experience.md](add-experience.md) |
@@ -31,7 +32,6 @@ A practical guide to editing bashatahamal.github.io. The site is **Jekyll** (sta
 - [Add or edit an experience entry](add-experience.md)
 - [Update the CV PDF (LaTeX workflow)](update-cv.md)
 - [Site settings: availability chip + writing toggle](site-settings.md)
-- [Analysis: what's left and what's worth doing](recommendations.md)
 
 ## Look and feel (colors, fonts, favicon)
 

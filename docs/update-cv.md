@@ -66,4 +66,4 @@ It caches failures. `latexmk -C main.tex` then compile again.
 ## Rules for CV content
 - Same voice rules as the site: plain sentences, no fluff.
 - Summary says "over 5 years of professional experience"; bump it as time passes.
-- It's 4 pages as of July 2026. For applications, consider a trimmed 2-page variant (flagged in docs/recommendations.md).
+- It's 4 pages as of July 2026. For applications, consider a trimmed 2-page variant.
