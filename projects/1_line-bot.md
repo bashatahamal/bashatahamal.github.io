@@ -4,7 +4,6 @@ type: project
 
 title: Line Reminder Bot
 permalink: projects/line-bot
-modal-id: 1
 image: images/thumbnails/line-bot.jpg
 galleryImg: /images/line-bot
 date: June 2018

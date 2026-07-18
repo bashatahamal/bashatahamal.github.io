@@ -4,7 +4,6 @@ type: project
 
 title: Intelligent Traffic Monitoring System
 permalink: projects/ITMS
-modal-id: 7
 image: images/thumbnails/traffic.jpg
 galleryImg: /images/traffic
 videoUrl: https://drive.google.com/file/d/1AZoIrjbBcgRZGFJJ1PWqicQ99VftfeRm/preview?resourcekey=null

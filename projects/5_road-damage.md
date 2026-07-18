@@ -4,7 +4,6 @@ type: project
 
 title: Road Damage Detection and Recognition
 permalink: projects/road-damage
-modal-id: 5
 image: images/thumbnails/road-damage.jpg
 galleryImg: /images/road-damage
 date: July 2020

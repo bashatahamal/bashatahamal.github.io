@@ -20,7 +20,7 @@ A practical guide to editing bashatahamal.github.io. The site is **Jekyll** (sta
 | Contact email / footer text | `_includes/v2/organisms/footer.html` | plain HTML |
 | Social links (GitHub, LinkedIn, WA...) | `_includes/v2/atoms/social-links.html` | plain HTML |
 | Nav menu items | `_includes/v2/organisms/nav.html` | plain HTML |
-| Profile photo | replace `img/profile.png` (square image) | used by hero + CV link previews |
+| Profile photo | replace `img/profile.jpg` (square image) | used by hero + CV link previews |
 | The CV PDF people download | `cv/basha-tahamal-cv.pdf` | [update-cv.md](update-cv.md) |
 | Colors, fonts, spacing | `assets/v2/css/main.css` (tokens at top) | [Look and feel](#look-and-feel-colors-fonts-favicon) below |
 | Favicon | run `scripts/make_favicon.py` | [Look and feel](#look-and-feel-colors-fonts-favicon) below |

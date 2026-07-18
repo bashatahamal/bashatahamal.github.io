@@ -4,7 +4,6 @@ type: project
 
 title: Relink Automatic Plastic Bottle Separator
 permalink: projects/relink-bottle
-modal-id: 2
 image: images/thumbnails/relink.jpg
 galleryImg: /images/relink-bottle
 date: March 2019
