@@ -2,7 +2,7 @@
 
 My personal site: portfolio, engineering notes, and CV. Live at [bashatahamal.github.io](https://bashatahamal.github.io).
 
-Built with Jekyll on GitHub Pages. No CSS or JS frameworks: the design system, layouts, and interactions are hand-rolled (about 1,000 lines of CSS on design tokens, and a small vanilla JS file). Editorial look: Charter serif, warm off-white paper, one green accent, gold hairlines, full dark mode.
+Built with Jekyll on GitHub Pages. No CSS or JS frameworks: the design system, layouts, and interactions are hand-rolled (about 1,000 lines of CSS on design tokens, and a small vanilla JS file). Editorial look: Newsreader display headings over Charter serif prose, warm off-white paper, one green accent, gold hairlines, full dark mode.
 
 ## Running locally
 
