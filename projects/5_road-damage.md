@@ -1,10 +1,12 @@
 ---
 layout: project
 type: project
+index: P.05
 
 title: Road Damage Detection and Recognition
 permalink: projects/road-damage
 image: images/thumbnails/road-damage.jpg
+ogImage: images/og/road-damage.png
 galleryImg: /images/road-damage
 date: July 2020
 labels:

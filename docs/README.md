@@ -25,6 +25,7 @@ A practical guide to editing bashatahamal.github.io. The site is **Jekyll** (sta
 | Colors, fonts, spacing | `assets/v2/css/main.css` (tokens at top) | [Look and feel](#look-and-feel-colors-fonts-favicon) below |
 | Favicon | run `scripts/make_favicon.py` | [Look and feel](#look-and-feel-colors-fonts-favicon) below |
 | SEO title/description/social preview | `_layouts/v2.html` `<head>` + `_config.yml` `description:` | plain HTML |
+| Social-share image (og:image) for a project/post | run `scripts/make_og_images.py`, set `ogImage:` in front matter | [Look and feel](#look-and-feel-colors-fonts-favicon) below |
 
 ## Task guides
 - [Add or edit a blog post](add-blog-post.md)
@@ -41,7 +42,9 @@ All styling is one file, `assets/v2/css/main.css`, and every color/font is a **d
 - Key tokens: `--accent` (the green `#0e6e55`), `--gold` (`#a16f0b` hairlines), `--bg`, `--ink`, `--serif`, `--sans`.
 - **Never hard-code a color in a component.** Always use `var(--token)` so dark mode keeps working.
 
-Favicon: `scripts/make_favicon.py` regenerates the "B." monogram (favicon.ico + PNG sizes). Edit the colors/letter in the script, then `pip install pillow` and `python3 scripts/make_favicon.py`.
+Favicon: `scripts/make_favicon.py` regenerates the "B." monogram in Newsreader (favicon.ico + PNG sizes), from the repo's own self-hosted font. Edit the colors/letter in the script, then `pip install pillow fonttools brotli` and `python3 scripts/make_favicon.py`.
+
+Social-share images: `scripts/make_og_images.py` renders a 1200x630 `og:image` card for every project and post (plus one default card for the homepage/writing index) straight from each file's front matter (`title`, `date`, `summary`, `labels`), using the design system's og-image templates. Rerun it after editing a project or post's title/date/summary/tags: `pip install pillow fonttools brotli pyyaml` then `python3 scripts/make_og_images.py`. Output goes to `images/og/`; point a project or post's `ogImage:` front-matter field at the result (see [add-project-card.md](add-project-card.md) / [add-blog-post.md](add-blog-post.md)).
 
 ## How the template system fits together
 

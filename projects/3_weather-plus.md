@@ -1,10 +1,12 @@
 ---
 layout: project
 type: project
+index: P.03
 
 title: Automatic Rain Water Sampler and Real-time Monitoring System
 permalink: projects/weather-plus
 image: images/thumbnails/weather-plus.jpg
+ogImage: images/og/weather-plus.png
 galleryImg: /images/weather-plus
 date: January - March 2019
 labels:

@@ -1,10 +1,12 @@
 ---
 layout: project
 type: project
+index: P.06
 
 title: Quran Tajweed Rules Recognition
 permalink: projects/tajweed-rule
 image: images/thumbnails/tajweed-rule.jpg
+ogImage: images/og/tajweed-rule.png
 galleryImg: /images/tajweed-rule
 videoUrl: https://drive.google.com/file/d/1ZP2N09kOzt2V6csJlu4NogLvtbJfZf7L/preview?resourcekey=null
 date: April - September 2020

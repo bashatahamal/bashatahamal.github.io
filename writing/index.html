@@ -14,7 +14,7 @@ summary: Notes from building AI systems in production.
       {% for post in site.posts %}
       <li>
         <a href="{{ site.baseurl }}{{ post.url }}">
-          <span class="a-kicker">{{ post.date | date: "%B %-d, %Y" }}</span>
+          <span class="a-kicker">{% if post.index %}<span class="a-index">{{ post.index }}</span> · {% endif %}{{ post.date | date: "%B %-d, %Y" }}</span>
           <h2>{{ post.title }}</h2>
           {% if post.excerpt %}<p>{{ post.excerpt | strip_html }}</p>{% endif %}
           <span class="read">Read &rarr;</span>

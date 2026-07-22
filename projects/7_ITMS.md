@@ -1,10 +1,12 @@
 ---
 layout: project
 type: project
+index: P.07
 
 title: Intelligent Traffic Monitoring System
 permalink: projects/ITMS
 image: images/thumbnails/traffic.jpg
+ogImage: images/og/ITMS.png
 galleryImg: /images/traffic
 videoUrl: https://drive.google.com/file/d/1AZoIrjbBcgRZGFJJ1PWqicQ99VftfeRm/preview?resourcekey=null
 date: September 2020 - February 2021

@@ -38,6 +38,18 @@
   font-display: swap;
 }
 
+/* Newsreader webfont (SIL Open Font License, see ../fonts/Newsreader license.txt).
+   Only the weight the site actually uses (600, normal) is shipped, matching
+   Charter's discrete-static-file pattern rather than a full variable font. */
+@font-face {
+  font-family: "Newsreader";
+  src: url("../fonts/newsreader_600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-display: swap;
+}
+
 /* ------------------------------------------------------------------ tokens */
 :root {
   /* palette — light */
@@ -194,6 +206,11 @@ section { padding: clamp(3.5rem, 9vh, 6rem) 0; }
   text-transform: uppercase;
   color: var(--ink-faint);
 }
+
+/* a-index — catalogue number: every project (P.01) and post (W.01) carries a
+   persistent gold mono index, used in list rows, page headers, and OG images.
+   Assigned in creation order at creation, never renumbered. */
+.a-index { font-family: var(--mono); font-size: 0.9em; font-weight: 500; letter-spacing: 0.04em; color: var(--gold); }
 
 /* a-section-heading — numbered heading with gold hairline, echoes CV titlerule */
 .a-section-heading {

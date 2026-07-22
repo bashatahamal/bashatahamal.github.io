@@ -6,7 +6,7 @@
   </div>
   {% endif %}
   <div class="body">
-    <span class="a-kicker">{{ p.date }}</span>
+    <span class="a-kicker">{% if p.index %}<span class="a-index">{{ p.index }}</span> · {% endif %}{{ p.date }}</span>
     <h3>{{ p.title }}</h3>
     <p class="summary">{{ p.summary }}</p>
     {% if p.labels %}

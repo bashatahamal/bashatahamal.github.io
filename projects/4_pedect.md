@@ -1,10 +1,12 @@
 ---
 layout: project
 type: project
+index: P.04
 
 title: Pedestrian Detector for Sidewalk Safety
 permalink: projects/pedect
 image: images/thumbnails/pedect.jpg
+ogImage: images/og/pedect.png
 galleryImg: /images/pedect
 videoUrl: https://drive.google.com/file/d/1oVFsRA312z5ffcr8rqHKy0UeP3n5KrYM/preview?resourcekey=null
 date: August - December 2019

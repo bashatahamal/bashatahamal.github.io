@@ -21,8 +21,8 @@
   <meta property="og:title" content="{% if page_title and page_title != '' and page.url != '/' %}{{ page_title }}{% else %}{{ site.title }} - Software Engineer, AI/LLM Systems{% endif %}">
   <meta property="og:description" content="{{ page_desc }}">
   <meta property="og:url" content="https://bashatahamal.github.io{{ page.url }}">
-  <meta property="og:image" content="https://bashatahamal.github.io/{% if page.image %}{{ page.image }}{% else %}img/profile.jpg{% endif %}">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://bashatahamal.github.io/{% if page.ogImage %}{{ page.ogImage }}{% elsif page.image %}{{ page.image }}{% else %}images/og/default.png{% endif %}">
+  <meta name="twitter:card" content="summary_large_image">
 
   <script>
     // Apply stored theme before first paint to avoid a flash.
@@ -34,9 +34,7 @@
     })();
   </script>
   <link rel="preload" href="{{ site.baseurl }}/assets/v2/fonts/charter_regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet">
+  <link rel="preload" href="{{ site.baseurl }}/assets/v2/fonts/newsreader_600.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Prerender internal pages when a link is hovered/touched, so card clicks
        feel instant (Chromium only; other browsers ignore this). -->
   <script type="speculationrules">

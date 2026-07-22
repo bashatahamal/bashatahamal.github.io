@@ -1,10 +1,12 @@
 ---
 layout: project
 type: project
+index: P.01
 
 title: Line Reminder Bot
 permalink: projects/line-bot
 image: images/thumbnails/line-bot.jpg
+ogImage: images/og/line-bot.png
 galleryImg: /images/line-bot
 date: June 2018
 labels:

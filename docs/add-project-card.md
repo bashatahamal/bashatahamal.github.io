@@ -48,7 +48,9 @@ describe-closing: '<strong>Tools used:</strong> Python, FastAPI, Postgres, etc.'
 | `layout: project` / `type: project` | required plumbing | Always include both, exactly as shown. |
 | `title` | card + page heading | |
 | `permalink` | the URL | `projects/slug` → lives at `/projects/slug`. No file extension. |
+| `index` | catalogue number in the kicker | `P.0N`, one higher than the last project. Assign once, never renumber. |
 | `image` | card thumbnail | Path from repo root, e.g. `images/thumbnails/x.png`. |
+| `ogImage` | social-share preview image | Path to a 1200x630 PNG. Generate with `scripts/make_og_images.py` after adding the project (uses `title`/`date`/`summary`/`labels`) rather than making one by hand. |
 | `date` | card + page kicker | Plain text. Use hyphens, not dashes: `July 2024 - September 2024`. |
 | `labels` | the tags | **Use exactly 3.** Domain + key tech. |
 | `summary` | card description | One outcome-first sentence. |

@@ -46,9 +46,11 @@ print("code blocks render in a monospace box")
 | Field | Required | What it does |
 |---|---|---|
 | `title` | yes | Shown as the H1 and in lists. Wrap in quotes. |
+| `index` | recommended | Catalogue number in the kicker: `W.0N`, one higher than the last post. Assign once, never renumber. |
 | `date` | yes | `YYYY-MM-DD`. Controls order (newest first) and the displayed date. |
 | `excerpt` | recommended | The summary in lists/teasers. If omitted, Jekyll uses the first paragraph. |
 | `tags` | optional | 1-3 short tags, shown as chips under the title. Example: `tags: [LLM, Cost]` |
+| `ogImage` | recommended | Path to a 1200x630 social-share PNG. Generate with `scripts/make_og_images.py` after writing the post. |
 
 ## What renders (markdown reference)
 
