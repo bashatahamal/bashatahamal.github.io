@@ -7,7 +7,7 @@ layout: v2
     <a class="back" href="{{ site.baseurl }}/#work">&larr; Back to work</a>
 
     <header>
-      <span class="a-kicker">{% if page.index %}<span class="a-index">{{ page.index }}</span> · {% endif %}{{ page.date }}</span>
+      <span class="a-kicker">{{ page.date }}</span>
       <h1>{{ page.title }}</h1>
       <div class="meta-row">
         {% for label in page.labels %}<span class="a-tag a-tag--accent">{{ label }}</span>{% endfor %}

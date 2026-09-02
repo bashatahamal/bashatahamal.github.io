@@ -589,7 +589,11 @@ a.m-timeline-card:hover .view { opacity: 1; transform: translateX(0); color: var
 }
 .o-hero .actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.6rem 0 0; align-items: center; }
 @media (max-width: 720px) {
-  .o-hero .inner { grid-template-columns: 1fr; }
+  /* The 12vh hero padding is a desktop gesture; on a tall phone it caps out at
+     7.5rem of blank ground above the portrait and pushes the name, status, and
+     lede past the fold. Tighten it so the opening lands in the first screen. */
+  .o-hero { padding: 2.25rem 0 2.75rem; }
+  .o-hero .inner { grid-template-columns: 1fr; gap: 1.5rem; }
   .o-hero .lead { order: 1; }
   .o-hero .portrait { order: 0; width: 7.5rem; height: 7.5rem; }
 }
@@ -663,13 +667,32 @@ a.m-timeline-card:hover .view { opacity: 1; transform: translateX(0); color: var
 }
 .o-footer .meta a { color: inherit; }
 
-/* credit-line easter egg: hovering the text cross-fades to the wink.
-   Both lines stack in one grid cell so nothing jumps; the cell reserves
-   the width of the longer line, right-aligned against "· Source". */
+/* credit-line easter egg. The wink is a real button so it works without a
+   mouse, kept as its own control so a tap can't land on Source by mistake.
+   Both lines stack in one grid cell so flipping never reflows the row, which
+   means the cell is always as wide as the LONGER line; where that slack goes
+   is what the alignment below is managing. State comes from .is-flipped (tap
+   or timer, see main.js); hover inverts whatever that state currently is. */
+.o-footer .credit {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+/* Wide: the group sits at the right end of the meta row, so the text is
+   right-aligned in its cell and always ends flush against "· Source". The
+   slack falls to the LEFT of the text, where nothing marks it. */
 .o-footer .credit-swap {
   display: inline-grid;
   justify-items: end;
   vertical-align: bottom;
+  /* a button that has to read as the sentence it contains */
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  text-align: inherit;
+  cursor: pointer;
 }
 .o-footer .credit-swap > span {
   grid-area: 1 / 1;
@@ -677,13 +700,31 @@ a.m-timeline-card:hover .view { opacity: 1; transform: translateX(0); color: var
   transition: opacity 180ms ease;
 }
 .o-footer .credit-alt { opacity: 0; }
-.o-footer .credit-swap:hover .credit-default { opacity: 0; }
-.o-footer .credit-swap:hover .credit-alt { opacity: 1; }
-@media (hover: none), (max-width: 720px) {
-  /* touch devices can't hover; show only the default, allow wrapping */
-  .o-footer .credit-swap { display: inline; }
+.o-footer .credit-swap.is-flipped .credit-default { opacity: 0; }
+.o-footer .credit-swap.is-flipped .credit-alt { opacity: 1; }
+.o-footer .credit-swap:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+/* Last, so hover wins the tie against the .is-flipped rules above. */
+@media (hover: hover) {
+  .o-footer .credit-swap:hover .credit-default { opacity: 0; }
+  .o-footer .credit-swap:hover .credit-alt { opacity: 1; }
+  .o-footer .credit-swap.is-flipped:hover .credit-default { opacity: 1; }
+  .o-footer .credit-swap.is-flipped:hover .credit-alt { opacity: 0; }
+}
+@media (max-width: 720px) {
+  /* Narrow: the row stacks left-aligned, so right-aligning the text inside its
+     cell would indent it raggedly against the copyright line above. Align it
+     left instead and drop Source onto its own line, so nothing sits against
+     the cell's right edge to expose the slack. Both lines may wrap; the cell
+     takes the taller one, so the swap still never shifts the layout. */
+  .o-footer .credit { display: block; }
+  .o-footer .credit-sep { display: none; }
+  .o-footer .credit-swap { display: grid; justify-items: start; }
   .o-footer .credit-swap > span { white-space: normal; }
-  .o-footer .credit-alt { display: none; }
+  .o-footer .credit > a { display: inline-block; margin-top: 0.4rem; }
 }
 
 /* ------------------------------------------------------- project detail page */

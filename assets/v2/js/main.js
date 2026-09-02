@@ -108,6 +108,61 @@
     poster.replaceWith(wrap);
   });
 
+  // Footer credit: the wink shows itself. Once the footer is on screen the two
+  // lines alternate on a timer, so a visitor who only scrolls to the bottom
+  // still meets it without touching anything. Tapping flips it by hand and
+  // retires the timer for the rest of the visit: someone who has taken control
+  // should not have the text keep moving under their thumb (that tap is also
+  // the manual stop WCAG wants for auto-updating content). Reduced-motion
+  // visitors get the tap only, never the timer.
+  var creditSwap = document.querySelector("[data-credit-swap]");
+  var creditFooter = document.querySelector(".o-footer");
+  if (creditSwap) {
+    // Asymmetric on purpose: the credit line is the resting state and the wink
+    // is only a peek, long enough to register as "there is another line here"
+    // and to actually be read (it is ~55 characters, so under about 1.5s it
+    // reads as a flicker rather than a sentence). Tune these numbers.
+    var CREDIT_REST_MS = 5000;
+    var CREDIT_PEEK_MS = 1800;
+    // A tap buys quiet, it does not switch the loop off. The grace is added on
+    // top of whatever the state you tapped into would normally hold for, so it
+    // reads as "three more seconds" from either side rather than a fixed stall.
+    var CREDIT_TAP_GRACE_MS = 3000;
+    var CREDIT_FIRST_MS = 1500;
+
+    var creditTimer;
+    var creditVisible = false;
+
+    function stopCredit() {
+      clearTimeout(creditTimer);
+    }
+
+    function cycleCredit(delay) {
+      stopCredit();
+      // Off screen or reduced-motion: no loop. Tapping still works in both.
+      if (!creditVisible || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      creditTimer = setTimeout(function () {
+        var showingWink = creditSwap.classList.toggle("is-flipped");
+        cycleCredit(showingWink ? CREDIT_PEEK_MS : CREDIT_REST_MS);
+      }, delay);
+    }
+
+    creditSwap.addEventListener("click", function () {
+      var showingWink = creditSwap.classList.toggle("is-flipped");
+      cycleCredit((showingWink ? CREDIT_PEEK_MS : CREDIT_REST_MS) + CREDIT_TAP_GRACE_MS);
+    });
+
+    if (creditFooter && typeof IntersectionObserver === "function") {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          creditVisible = entry.isIntersecting;
+          if (creditVisible) cycleCredit(CREDIT_FIRST_MS);
+          else stopCredit();
+        });
+      }, { threshold: 0.35 }).observe(creditFooter);
+    }
+  }
+
   // Post mini-TOC: left rail, wide screens only, built from h2 headings.
   // Only long posts get one (3+ sections); short posts stay chrome-free.
   var postContainer = document.querySelector(".post .container");

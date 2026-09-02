@@ -8,19 +8,25 @@
     </div>
     <div class="meta">
       <span>© {{ site.time | date: "%Y" }} {{ site.title }} · Yogyakarta / Bekasi, Indonesia</span>
-      <!-- Credit line with hover easter egg: default text cross-fades to the
-           wink on hover (desktop only; touch devices just see the default).
+      <!-- Credit line easter egg. The wink is its own control (a button, not a
+           hover-only span) so a thumb can never hit Source by mistake. Once the
+           footer is on screen the two lines alternate on a timer (long rest,
+           short peek); hover inverts it, tapping flips it by hand and buys a
+           few seconds before the loop resumes. All of it lives in main.js;
+           where the swap's spare width goes at each breakpoint is in main.css.
            Other alternatives if the wording ever changes:
            "Directed by me, typed by Claude, served by Jekyll"
            "Built by me and my favorite pair programmer, Claude"
            "Built with Jekyll and Claude"
       -->
       <span class="credit">
-        <span class="credit-swap">
+        <button class="credit-swap" type="button" data-credit-swap>
           <span class="credit-default">Made with Jekyll, Claude, and strong opinions</span>
           <span class="credit-alt" aria-hidden="true">An AI engineer's site, so yes, an AI helped build it ;)</span>
-        </span>
-        · <a href="https://github.com/bashatahamal/bashatahamal.github.io" target="_blank" rel="noopener">Source</a></span>
+        </button>
+        <span class="credit-sep" aria-hidden="true">·</span>
+        <a href="https://github.com/bashatahamal/bashatahamal.github.io" target="_blank" rel="noopener">Source</a>
+      </span>
     </div>
   </div>
 </footer>
