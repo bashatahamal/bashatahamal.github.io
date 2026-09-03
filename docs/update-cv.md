@@ -2,9 +2,9 @@
 
 The CV is LaTeX, kept in a **separate repo**: `~/space/portfolio/cv_docs/cv/latest/`.
 
-- `main.tex` = the master CV (real contact info). **This is the one the site publishes.**
-- `public_safe.pdf` / `public_safe.tex` = older scrubbed variant. As of 2026-07-09 it lags behind main (missing the HDCE-TIB block). Prefer maintaining `main.tex` only.
+- `main.tex` = the only CV source (real contact info). **This is the one the site publishes.**
 - `basha.jpg` = the photo used in the header.
+- There used to be a `public_safe.tex` / `public_safe.pdf` scrubbed variant; it's retired (as of 2026-09-04) since it never stayed in sync and never actually got scrubbed. Don't recreate it without a real plan to keep it current.
 
 ## The workflow (edit → compile → publish)
 
