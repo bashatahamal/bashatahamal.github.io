@@ -6,10 +6,10 @@
   recent: true
   link: /projects/berning
   summary: >
-    Built Leadflow, an AI-powered lead generation platform with automated
-    lead ingestion and enrichment, multi-client LLM scoring pipelines, and
-    AI-driven personalized outreach. FastAPI, PostgreSQL, Redis, and LLM
-    orchestration end to end.
+    Helped grow Leadflow, an AI-powered lead generation platform, from a
+    single-client scoring engine into a multi-client, agent-driven system:
+    AI research agents, deduplication, a rebuilt review product, and
+    AI-personalized outreach.
 
 - company: Career break
   role: Wedding & relocation
