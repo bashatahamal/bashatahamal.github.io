@@ -1,4 +1,9 @@
 ---
-layout: default
+layout: v2
 ---
 
+{% include v2/organisms/hero.html %}
+{% include v2/organisms/work-grid.html %}
+{% include v2/organisms/experience.html %}
+{% include v2/organisms/about.html %}
+{% if site.show_writing %}{% include v2/organisms/writing-soon.html %}{% endif %}

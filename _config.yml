@@ -1,94 +1,43 @@
-# Site settings
+# ---- Site switches (how-to: docs/site-settings.md) ----
+
+# Availability chip in the hero. Change text/tone here, no HTML needed.
+# tone: open (green dot) | busy (gold dot) | quiet (neutral text, no dot)
+availability:
+  show: true
+  text: Open to new roles
+  tone: open
+
+# Writing section. false = hidden everywhere (homepage section, nav link,
+# /writing/ page shows "coming soon"). Flip to true when ready to publish.
+show_writing: false
+
+# Hide unfinished work cards without touching the project files. List project
+# slugs (the last part of the permalink: projects/berning -> berning).
+# Hidden = card gone from the work grid; the detail page still renders at its
+# direct URL but gets a noindex meta tag. Example: hidden_projects: [berning]
+hidden_projects: []
+
+# ---- Site metadata ----
+
 title: Basha Tahamal
 nickname: Basha
 fullname: M. Hawatif Basharuddin R. T.
-# email: m.hawatif.basharuddin@mail.ugm.ac.id
 email: bashatahamal@gmail.com
-url: https://github.com/bashatahamal
-description: "Muhammad Hawatif Basharuddin Rabbani Tahammal portfolio web"
-keywords: "Basha, Computer Vison, Machine Learning, Software Engineer"
-skills: "Software Engineer - LLM - Machine Learning - Computer Vision - DevOps"
-meta_author: Tahamal Basha
-# about: Hi, my name is Basha, I have a degree in the Department of Computer Science and Electronics, Universitas Gadjah Mada, majoring in Electronics and Instrumentation with cum laude predicate. I can learn things quickly and creatively. I am also a resilient person and an excellent thinker. When working in a team I play most of the role as a leader and as a member I can still contribute with my creative ideas and collaborate effectively. I can adapt to various conditions quickly by always trying to push myself to learn to be better and trying to take initiative. I have an interest in software in general and what I have been researching and working on recently is machine learning, computer vision and some web development. This is just the beginning of what I can do and I believe in my potential to be able to do more and benefit society with the skills I have. 
-# about : Hi, my name is Basha, I have a degree in the Department of Computer Science and Electronics, Universitas Gadjah Mada, majoring in Electronics and Instrumentation with cum laude predicate. I can learn things quickly and creatively. I am also a resilient person and an excellent thinker. When working in a team I play most of the role as a leader and as a member I can still contribute with my creative ideas and collaborate effectively. I can adapt to various conditions quickly by always trying to push myself to learn to be better and trying to take initiative. I have interest on software in general and my latest working experience is on software engineering and development operations. This is just the beginning of what I can do and I believe in my potential to be able to do more !
-# about : Hi, my name is Basha, I have a degree in the Department of Computer Science and Electronics, Universitas Gadjah Mada, majoring in Electronics and Instrumentation with cum laude predicate. I can learn things quickly and creatively. I am also a resilient person and an excellent thinker. When working in a team I play most of the role as a leader and as a member I can still contribute with my creative ideas and collaborate effectively. I have interest on software in general and my latest working experience is on machine learning, software engineering and development operations. This is just the beginning of what I can do and I believe in my potential to be able to do more !
-about: Hi, my name is Basha! I'm a Software Engineer with years of professional experience specializing in Machine Learning, Software Development, and DevOps. I have a degree from Universitas Gadjah Mada in Electronics and Instrumentation, where I developed a strong foundation in AI and computer vision. Throughout my career, I have successfully led and developed AI-driven applications, including LLM-based conversational assistants, OCR automation, computer vision solutions, and recommendation systems. My expertise spans AI applications, Dev/MLOps, cloud optimization, and AI-driven automation, with a proven track record of enhancing efficiency and reducing operational costs. I am passionate about integrating AI solutions into real-world applications, contributing to industries like aquaculture, cybersecurity, e-commerce, and agribusiness. I thrive in cross-functional teams, leveraging technical expertise, leadership, and innovation to drive impactful and scalable AI solutions.
+description: "Basha Tahamal, software engineer specializing in AI/LLM systems: LLM applications, agents and RAG pipelines, computer vision, and MLOps."
+meta_author: Basha Tahamal
 
+# ---- Build settings ----
 
 baseurl: ""
-theme-home: theme-home-builtin-1.html
-theme-projects: theme-projects-builtin-1a.html
-theme-essays: theme-essays-builtin-1a.html
-theme-bio: theme-bio-builtin-1.html
-
-# Google webmaster tools
-google_verify:
-
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
-
-# Contact form:
-# - static : pass through formspree.io to validate email sending
-# - disqus : replace contact form by disqus thread
-# - comment the line below if you want to stick with the default PHP contact form
-contact: static
-
-# If you use disqus you need disqus shortname
-# https://help.disqus.com/customer/portal/articles/466208
-disqus_shortname: myshortname
-
-# Color settings (hex-codes without the leading hash-tag)
-#color:
-  #primary: 18bc9c #80B3FF
-  #primary-rgb: "24,288,156" #"128,179,255"
-  #secondary: 2c3e50 #FD6E8A
-  #secondary-dark: 233140 #A2122F
-color:
-  primary: 757575
-  primary-rgb: "117,117,117"
-  secondary: 212121
-  secondary-dark: "000000"
-
-# Footer settings
-footer:
-  copyright: Basha Tahamal (2025)
-  location: Address
-  social: Around the Web
-  credits: Phone Number
-
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: https://twitter.com/bashatahamal
-  - title: telegram
-    url: https://t.me/bashatahamal
-  - title: whatsapp
-    url: https://wa.me/+6285643755459
-  # - title: envelope
-  #   url: mailto:m.hawatif.basharuddin@mail.ugm.ac.id
-  - title: linkedin
-    url: https://www.linkedin.com/in/bashatahamal
-  - title: line
-    url: https://line.me/ti/p/-dvE2Uf8BA
-  # - title: github
-  #   url: https://github.com/bashatahamal
-
-# Postal address (add as many lines as necessary)
-address:
-  - line: Sleman
-  - line: Yogyakarta, 55281
-
-# Credits content
-credits: '+6285643755459'
-
-# Build settings
 markdown: kramdown
 permalink: pretty
+exclude: [README.md, CLAUDE.md, docs, scripts, temp, Dockerfile, docker-compose.yml, Rakefile, Gemfile, Gemfile.lock, LICENSE]
 
-#for posts
+# Blog posts
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
-      permalink: ""
+      layout: "post"
+      permalink: /writing/:title/

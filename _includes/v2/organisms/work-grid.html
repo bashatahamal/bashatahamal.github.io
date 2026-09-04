@@ -1,0 +1,15 @@
+<section class="o-work" id="work" aria-labelledby="work-title">
+  <div class="container">
+    {% include v2/atoms/section-heading.html num="01" id="work" title="How I Got Here" %}
+    <p class="section-intro">Newest first, from early student experiments to production AI systems. Not a highlight reel, more an honest record of how I've grown as an engineer.</p>
+    <div class="grid">
+      {% assign project_pages = site.pages | where: "type", "project" | sort: "name" | reverse %}
+      {% for page in project_pages %}
+        {% assign project_slug = page.permalink | split: "/" | last %}
+        {% unless page.draft or site.hidden_projects contains project_slug %}
+          {% include v2/molecules/project-card.html page=page %}
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

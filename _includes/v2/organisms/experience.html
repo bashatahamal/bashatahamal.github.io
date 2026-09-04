@@ -1,0 +1,12 @@
+<section class="o-experience" id="experience" aria-labelledby="experience-title">
+  <div class="container">
+    {% include v2/atoms/section-heading.html num="02" id="experience" title="Experience" %}
+    <div class="cols">
+      <ul class="m-timeline">
+        {% for job in site.data.experience %}
+          {% include v2/molecules/timeline-item.html job=job %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

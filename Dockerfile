@@ -1,26 +1,20 @@
-# Use official Ruby image as the base image
 FROM ruby:3.1-slim
 
-# Set working directory inside the container
 WORKDIR /app
 
-# Install necessary system dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
   build-essential \
   git \
   && rm -rf /var/lib/apt/lists/*
 
-# Install Jekyll and Bundler gems
-RUN gem install jekyll bundler
-
-# Copy the Jekyll project files into the container
-COPY . /app
-
-# Install project dependencies
+# Gems first, so this layer stays cached until the Gemfile changes
+COPY Gemfile ./
 RUN bundle install
 
-# Expose the port that Jekyll will serve on
+COPY . /app
+
 EXPOSE 4000
 
-# Command to run Jekyll server
-CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
+# --force_polling: file-change events do not cross the Windows bind mount,
+# so poll for changes instead (otherwise edits require a container restart)
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling"]

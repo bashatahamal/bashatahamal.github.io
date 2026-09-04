@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% assign page_title = page.title | strip_html %}
+  <title>{% if page_title and page_title != "" and page.url != "/" %}{{ page_title }} · {{ site.title }}{% else %}{{ site.title }} - Software Engineer, AI/LLM Systems{% endif %}</title>
+  {% assign page_desc = page.summary | default: site.description | strip_html | strip_newlines | truncate: 160 %}
+  <meta name="description" content="{{ page_desc }}">
+  <meta name="author" content="{{ site.meta_author }}">
+  <link rel="canonical" href="https://bashatahamal.github.io{{ page.url }}">
+  {% assign page_slug = page.permalink | split: "/" | last %}
+  {% if page.type == "project" and site.hidden_projects contains page_slug %}
+  <meta name="robots" content="noindex">
+  {% endif %}
+  <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ site.baseurl }}/assets/v2/favicon-512.png">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/v2/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if page_title and page_title != '' and page.url != '/' %}{{ page_title }}{% else %}{{ site.title }} - Software Engineer, AI/LLM Systems{% endif %}">
+  <meta property="og:description" content="{{ page_desc }}">
+  <meta property="og:url" content="https://bashatahamal.github.io{{ page.url }}">
+  <meta property="og:image" content="https://bashatahamal.github.io/{% if page.ogImage %}{{ page.ogImage }}{% elsif page.image %}{{ page.image }}{% else %}images/og/default.png{% endif %}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script>
+    // Apply stored theme before first paint to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preload" href="{{ site.baseurl }}/assets/v2/fonts/charter_regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ site.baseurl }}/assets/v2/fonts/newsreader_600.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Prerender internal pages when a link is hovered/touched, so card clicks
+       feel instant (Chromium only; other browsers ignore this). -->
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": { "and": [
+        { "href_matches": "/*" },
+        { "not": { "href_matches": "/cv/*" } },
+        { "not": { "href_matches": "/feed.xml" } }
+      ]},
+      "eagerness": "moderate"
+    }]
+  }
+  </script>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/v2/css/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.fullname }}",
+    "alternateName": "{{ site.title }}",
+    "jobTitle": "Software Engineer",
+    "url": "https://bashatahamal.github.io",
+    "email": "mailto:{{ site.email }}",
+    "alumniOf": "Universitas Gadjah Mada",
+    "sameAs": [
+      "https://github.com/bashatahamal",
+      "https://www.linkedin.com/in/bashatahamal",
+      "https://twitter.com/bashatahamal"
+    ]
+  }
+  </script>
+</head>
+<body>
+  {% include v2/organisms/nav.html %}
+  {{ content }}
+  {% include v2/organisms/footer.html %}
+  <script src="{{ site.baseurl }}/assets/v2/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% assign job = include.job %}
+<li class="m-timeline-item{% if job.recent %} m-timeline-item--current{% endif %}">
+  {% if job.link %}
+  <a class="m-timeline-card" href="{{ site.baseurl }}{{ job.link }}">
+    <div class="head">
+      <h3>{{ job.company }}</h3>
+      <span class="role">{{ job.role }}</span>
+      <span class="a-kicker">{{ job.period }}{% if job.location %} · {{ job.location }}{% endif %}</span>
+    </div>
+    <p class="desc">{{ job.summary }}</p>
+    <span class="view">View details &rarr;</span>
+  </a>
+  {% else %}
+  <div class="m-timeline-card m-timeline-card--static">
+    <div class="head">
+      <h3>{{ job.company }}</h3>
+      <span class="role">{{ job.role }}</span>
+      <span class="a-kicker">{{ job.period }}{% if job.location %} · {{ job.location }}{% endif %}</span>
+    </div>
+    <p class="desc">{{ job.summary }}</p>
+  </div>
+  {% endif %}
+</li>

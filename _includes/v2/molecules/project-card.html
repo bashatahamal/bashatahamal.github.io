@@ -1,0 +1,18 @@
+{% assign p = include.page %}
+<a class="m-project-card" href="{{ site.baseurl }}/{{ p.permalink }}">
+  {% if p.image %}
+  <div class="thumb">
+    <img src="{{ site.baseurl }}/{{ p.image }}" alt="{{ p.title | strip_html }} thumbnail" loading="lazy">
+  </div>
+  {% endif %}
+  <div class="body">
+    <span class="a-kicker">{{ p.date }}</span>
+    <h3>{{ p.title }}</h3>
+    <p class="summary">{{ p.summary }}</p>
+    {% if p.labels %}
+    <div class="tags">
+      {% for label in p.labels %}<span class="a-tag">{{ label }}</span>{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</a>

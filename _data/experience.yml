@@ -1,0 +1,79 @@
+# Experience timeline. Keep in sync with cv_docs/cv/latest/main.tex (see REDESIGN.md section 4)
+- company: Berning
+  role: Software Engineer, AI Systems
+  period: January 2026 - July 2026
+  location: US (remote)
+  recent: true
+  link: /projects/berning
+  summary: >
+    Helped grow Leadflow, an AI-powered lead generation platform, from a
+    single-client scoring engine into a multi-client, agent-driven system:
+    AI research agents, deduplication, a rebuilt review product, and
+    AI-personalized outreach.
+
+- company: Career break
+  role: Wedding & relocation
+  period: June 2025 - December 2025
+  location: Indonesia
+  summary: >
+    A planned break to get married and relocate. I kept up with where LLM
+    agents and tooling were heading, and returned to work in January 2026.
+
+- company: HDCE Inc. (TIB Finance)
+  role: AI Engineer
+  period: February 2025 - May 2025
+  location: Canada (remote)
+  link: /projects/hdce
+  summary: >
+    Strategic AI engineering partner to the CEO. Built a real-time multilingual
+    audio translation system (WebRTC + Meta Seamless), LLM agent and RAG systems
+    with a vector-based knowledge management system, and social media automation
+    agents with human-in-the-loop review.
+
+- company: eFishery
+  role: AI Research Engineer, then AI Squad Leader
+  period: July 2023 - February 2025
+  location: Bandung, ID
+  link: /projects/efishery
+  summary: >
+    Created and led Mas Ahya, a generative-AI assistant for aquaculture farmers,
+    presented by Microsoft CEO Satya Nadella at Microsoft AI Day. Cut LLM service
+    costs by up to 80% and cloud costs by up to 60%. Led the AI squad and
+    supervised OCR and eKYC automation projects.
+
+- company: HDCE Inc.
+  role: Freelance AI Engineer
+  period: October 2024 - December 2024
+  location: Canada (remote)
+  link: /projects/hdce
+  summary: >
+    Mentored teams on local LLM training and fine-tuning, and built a
+    phone-call voice-authentication proof of concept with Twilio.
+
+- company: Great Giant Foods
+  role: Freelance AI Engineer
+  period: July 2024 - September 2024
+  location: Yogyakarta, ID
+  link: /projects/ggf
+  summary: >
+    OCR desktop and API services for banana-harvest record keeping (GPT-4o),
+    plus an end-to-end RAG application for internal cultivation knowledge.
+
+- company: Yuna & Co.
+  role: Machine Learning & Software Engineer, DevOps
+  period: April 2021 - June 2023
+  location: Jakarta, ID
+  link: /projects/yuna
+  summary: >
+    Recommendation systems, image understanding, and product search for a
+    fashion e-commerce platform. Also built and ran the microservices platform
+    on Kubernetes across GCP and AWS with full CI/CD.
+
+- company: Freelance ML Research
+  role: Machine Learning Researcher
+  period: July 2020 - February 2021
+  location: Yogyakarta, ID / Malaysia
+  link: /projects/ITMS
+  summary: >
+    Intelligent traffic monitoring (vehicle counting, violation detection) and
+    road-damage detection and segmentation with YOLO, LinkNet, UNet, and FPN.

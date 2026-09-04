@@ -1,18 +1,18 @@
 ---
 layout: project
 type: project
+index: P.05
 
 title: Road Damage Detection and Recognition
 permalink: projects/road-damage
-modal-id: 5
 image: images/thumbnails/road-damage.jpg
+ogImage: images/og/road-damage.png
 galleryImg: /images/road-damage
 date: July 2020
 labels:
-    - deep learning
-    - image processing
-    - python
-    - tensorflow
+    - Deep Learning
+    - Image Segmentation
+    - PyTorch
 summary: Road damage detection with an output of binary image and road damage recognition with an output of bounding box and it's type of class. 
 describe-opening: <br>
 describe-content:
