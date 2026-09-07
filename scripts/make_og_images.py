@@ -3,6 +3,9 @@ plus one default card for the homepage / writing index, from the design
 system's og-image / og-image-project templates (light theme only, since a
 static og:image can't respond to the viewer's color scheme).
 
+Fonts are vendored in assets/v2/fonts/, so output is byte-reproducible across
+machines; nothing is read from the host's font directories.
+
 Usage (needs Pillow, fontTools, brotli, pyyaml):
     pip install pillow fonttools brotli pyyaml
     python3 scripts/make_og_images.py
@@ -63,38 +66,18 @@ def charter(size, bold=False):
     return _CHARTER_CACHE[key]
 
 
-_MONO_CANDIDATES = [
-    # Windows
-    (r"C:\Windows\Fonts\consola.ttf", r"C:\Windows\Fonts\consolab.ttf"),
-    # macOS
-    ("/System/Library/Fonts/Menlo.ttc", "/System/Library/Fonts/Menlo.ttc"),
-    (
-        "/System/Library/Fonts/Supplemental/Menlo-Regular.ttf",
-        "/System/Library/Fonts/Supplemental/Menlo-Bold.ttf",
-    ),
-    # Linux
-    (
-        "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf",
-    ),
-]
-
-_mono_paths = None
-
-
-def _resolve_mono_paths():
-    global _mono_paths
-    if _mono_paths is not None:
-        return _mono_paths
-    for regular, bold in _MONO_CANDIDATES:
-        if os.path.exists(regular) and os.path.exists(bold):
-            _mono_paths = (regular, bold)
-            return _mono_paths
-    raise SystemExit(
-        "No system monospace font found (tried Consolas, Menlo, DejaVu Sans Mono). "
-        "Add its path to _MONO_CANDIDATES in scripts/make_og_images.py."
-    )
-
+# Monospace is vendored (assets/v2/fonts/CascadiaMono.ttf) rather than probed
+# from the host, so these cards render identically on Windows, macOS, Linux and
+# in the Docker container. Probing used to pick Consolas / Menlo / DejaVu Sans
+# Mono depending on where the script ran, which silently rewrote every card's
+# metadata row whenever it was regenerated somewhere new.
+#
+# The file is Microsoft's Cascadia Mono, shipped unmodified under the SIL Open
+# Font License (see "Cascadia Mono license.txt" beside it). It is a variable
+# font, so the weights come from its named instances. Note this font is used
+# ONLY here, for rendering these PNGs; the site itself keeps the system mono
+# stack that the design system calls for.
+MONO_FILE = "CascadiaMono.ttf"
 
 _MONO_CACHE = {}
 
@@ -102,8 +85,15 @@ _MONO_CACHE = {}
 def mono(size, bold=False):
     key = ("bold" if bold else "regular", size)
     if key not in _MONO_CACHE:
-        regular, bold_path = _resolve_mono_paths()
-        _MONO_CACHE[key] = ImageFont.truetype(bold_path if bold else regular, size)
+        path = os.path.join(FONT_DIR, MONO_FILE)
+        if not os.path.exists(path):
+            raise SystemExit(
+                "Missing vendored monospace font: %s. "
+                "It should be committed alongside the Charter woff2 files." % path
+            )
+        font = ImageFont.truetype(path, size)
+        font.set_variation_by_name("Bold" if bold else "Regular")
+        _MONO_CACHE[key] = font
     return _MONO_CACHE[key]
 
 

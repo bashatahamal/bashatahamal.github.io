@@ -42,4 +42,5 @@ Gemfile.lock
 # Project Specific
 temp/
 *.log
-.local/
+.local/__pycache__/
+__pycache__/
