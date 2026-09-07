@@ -4,7 +4,7 @@ type: project
 index: P.06
 
 title: Quran Tajweed Rules Recognition
-permalink: projects/tajweed-rule
+permalink: projects/tajweed-rule/
 image: images/thumbnails/tajweed-rule.jpg
 ogImage: images/og/tajweed-rule.png
 galleryImg: /images/tajweed-rule

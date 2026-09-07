@@ -4,7 +4,7 @@ type: project
 index: P.04
 
 title: Pedestrian Detector for Sidewalk Safety
-permalink: projects/pedect
+permalink: projects/pedect/
 image: images/thumbnails/pedect.jpg
 ogImage: images/og/pedect.png
 galleryImg: /images/pedect

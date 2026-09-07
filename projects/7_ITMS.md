@@ -4,7 +4,7 @@ type: project
 index: P.07
 
 title: Intelligent Traffic Monitoring System
-permalink: projects/ITMS
+permalink: projects/ITMS/
 image: images/thumbnails/traffic.jpg
 ogImage: images/og/ITMS.png
 galleryImg: /images/traffic

@@ -4,7 +4,7 @@ type: project
 index: P.02
 
 title: Relink Automatic Plastic Bottle Separator
-permalink: projects/relink-bottle
+permalink: projects/relink-bottle/
 image: images/thumbnails/relink.jpg
 ogImage: images/og/relink-bottle.png
 galleryImg: /images/relink-bottle
