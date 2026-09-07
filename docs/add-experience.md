@@ -24,9 +24,9 @@ Copy the block above to the **top** of the list (newest first) and edit the fiel
 | Field | Required | What it does |
 |---|---|---|
 | `company` | yes | The bold title on the timeline. |
-| `role` | yes | Your title, shown in green next to the company. |
+| `role` | yes | Your title, shown in green next to the company. Append `(Contract)` when embedded on the client's team for a defined term, or `(Freelance)` when delivering scoped work as an outside vendor. |
 | `period` | yes | `Month Year - Month Year`. Plain hyphen, no dashes. |
-| `location` | optional | Shown after the period, e.g. `Remote`, `Bandung, ID`. |
+| `location` | optional | Employer location, with `(remote)` appended when the work was remote. e.g. `Bandung, ID`, `United States (remote)`. |
 | `recent: true` | optional | Marks the entry with a filled green dot (use it for the most recent role only). |
 | `link` | optional | A URL like `/projects/berning`. If set, the whole entry becomes clickable and shows "View details →" on hover. Point it at the matching project detail page. |
 | `summary` | yes | 1-3 sentences. The `>` lets you wrap across lines; they join into one paragraph. |
