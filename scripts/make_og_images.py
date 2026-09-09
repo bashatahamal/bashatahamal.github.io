@@ -249,7 +249,9 @@ def main():
 
     for path in sorted(glob.glob(os.path.join(ROOT, "projects", "*.md"))):
         fm = read_front_matter(path)
-        slug = fm["permalink"].split("/")[-1]
+        # rstrip: project permalinks end in a slash (projects/berning/) so that
+        # both URL forms resolve; without this the slug comes back empty.
+        slug = fm["permalink"].rstrip("/").split("/")[-1]
         card = make_card(
             kicker_text=f"Work · {fm['date']}",
             title_text=fm["title"],

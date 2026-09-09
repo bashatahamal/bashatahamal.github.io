@@ -7,9 +7,10 @@
   link: /projects/berning
   summary: >
     Helped grow Leadflow, the AI lead generation platform behind a life-science
-    contract sales organization, from a single-client scoring engine into a
-    multi-client, agent-driven system: AI research agents, deduplication, a
-    rebuilt review product, and AI-personalized outreach.
+    contract sales organization, from a single-client scoring engine into a full
+    agentic system: an in-product AI agent with its own tools and skills,
+    autonomous research agents, multi-client LLM scoring, and a rebuilt review
+    product feeding AI-personalized outreach.
 
 - company: Career break
   role: Wedding & relocation
