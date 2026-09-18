@@ -8,7 +8,7 @@ tags: [LLM, Lead Generation, Judgment]
 excerpt: "Building Leadflow at Berning meant one system had to judge prospects for many different clients, and no two clients actually agree on what a qualified lead looks like."
 ---
 
-At Berning I am building Leadflow, an AI powered lead generation platform, end to end. The problem that has taken up the most of my attention is not any single step in that pipeline, it is that the judgment at the end of it has to serve many clients at once, and a good lead for one client can look nothing like a good lead for another.
+At Berning I built Leadflow, an AI powered lead generation platform, end to end. The problem that took up most of my attention was not any single step in that pipeline, it was that the judgment at the end of it had to serve many clients at once, and a good lead for one client could look nothing like a good lead for another.
 
 ## Averaging away the thing that makes it useful
 
