@@ -70,11 +70,13 @@
     fashion e-commerce platform. Also built and ran the microservices platform
     on Kubernetes across GCP and AWS with full CI/CD.
 
-- company: Freelance ML Research
-  role: Machine Learning Researcher
-  period: July 2020 - February 2021
-  location: Yogyakarta, ID / Malaysia
+- company: Freelance Projects
+  role: AI/ML Engineer (Freelance)
+  period: July 2020 - March 2021
+  location: Yogyakarta, ID
   link: /projects/ITMS
   summary: >
-    Intelligent traffic monitoring (vehicle counting, violation detection) and
-    road-damage detection and segmentation with YOLO, LinkNet, UNet, and FPN.
+    Two computer vision engagements: intelligent traffic monitoring (vehicle
+    counting and violation detection) for a local client, and road damage
+    detection and segmentation for a client in Malaysia, using YOLO, LinkNet,
+    UNet, and FPN.
