@@ -612,6 +612,49 @@ a.m-timeline-card:hover .view { opacity: 1; transform: translateX(0); color: var
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.25rem;
 }
+/* folded cards (main.js); the card's own display would otherwise beat [hidden] */
+.o-work .grid > [hidden] { display: none; }
+/* the fold toggle sits on a gold hairline, like a page break in the record */
+.o-work .more { margin-top: 2.5rem; text-align: center; }
+.o-work .more[hidden] { display: none; }
+.o-work .more .rule { display: flex; align-items: center; gap: 1rem; }
+.o-work .more .rule::before,
+.o-work .more .rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: color-mix(in srgb, var(--gold) 45%, var(--line));
+}
+.o-work .more-btn {
+  cursor: pointer;
+  color: var(--accent-ink);
+  background: var(--bg);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+  padding: 0.7rem 1.3rem;
+  font-size: 0.95rem;
+}
+.o-work .more-btn:hover { background: var(--accent-wash); border-color: var(--accent); }
+.o-work .more-btn .arrow { flex: none; transition: transform 200ms ease; }
+.o-work .more-btn:hover .arrow { transform: translateY(2px); }
+.o-work .more-btn[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+.o-work .more-btn[aria-expanded="true"]:hover .arrow { transform: rotate(180deg) translateY(2px); }
+.o-work .more-meta { margin: 0.75rem auto 0; font-family: var(--mono); }
+.o-work .more-meta:empty { display: none; }
+@media (max-width: 560px) {
+  /* the full sentence needs the whole width on a phone: drop the hairlines
+     and let the button span the column, one line, one big tap target */
+  .o-work .more .rule::before,
+  .o-work .more .rule::after { display: none; }
+  .o-work .more-btn { flex: 1; justify-content: center; white-space: nowrap; font-size: 0.9rem; padding: 0.8rem 1rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  /* one small nudge when the toggle first scrolls into view (main.js adds .nudge) */
+  .o-work .more-btn.nudge .arrow { animation: more-nudge 1.1s ease-in-out 2; }
+}
+@keyframes more-nudge {
+  0%, 100% { transform: translateY(0); }
+  40% { transform: translateY(4px); }
+}
 
 /* o-experience */
 .o-experience .cols { max-width: 780px; }

@@ -46,6 +46,86 @@
     }
   });
 
+  // Work grid fold: show the newest two rows (three cards on a one-column
+  // phone) and tuck the rest behind a toggle. The limit follows the grid's
+  // real column count, so the last visible row is always full. Opening is
+  // remembered for the tab, so backing out of a project page keeps it open.
+  var workGrid = document.querySelector("[data-work-grid]");
+  var workMore = document.querySelector("[data-work-more]");
+  if (workGrid && workMore) {
+    var workCards = Array.prototype.slice.call(workGrid.children);
+    var workToggle = workMore.querySelector("[data-work-toggle]");
+    var workLabel = workMore.querySelector("[data-work-label]");
+    var workMeta = workMore.querySelector("[data-work-meta]");
+    // Oldest year on the page, read off the last (oldest) card's date kicker.
+    var workOldest = workCards.length &&
+      (workCards[workCards.length - 1].querySelector(".a-kicker") || {}).textContent;
+    var workYears = String(workOldest || "").match(/\d{4}/g);
+    var workFirstYear = workYears ? Math.min.apply(null, workYears) : null;
+    var workOpen = false;
+    try { workOpen = sessionStorage.getItem("work-open") === "1"; } catch (e) {}
+
+    function workLimit() {
+      var cols = getComputedStyle(workGrid).gridTemplateColumns.split(" ").filter(Boolean).length || 1;
+      return cols === 1 ? 3 : cols * 2;
+    }
+
+    function foldWork() {
+      var limit = workLimit();
+      if (workCards.length <= limit) {
+        workCards.forEach(function (card) { card.hidden = false; });
+        workMore.hidden = true;
+        return limit;
+      }
+      workCards.forEach(function (card, i) { card.hidden = !workOpen && i >= limit; });
+      workToggle.setAttribute("aria-expanded", workOpen ? "true" : "false");
+      var rest = workCards.length - limit;
+      workLabel.textContent = workOpen ? "Back to the latest" : "Keep going back to the earlier chapters";
+      workMeta.textContent = workOpen ? "" :
+        rest + " more project" + (rest === 1 ? "" : "s") +
+        (workFirstYear ? ", back to " + workFirstYear : "");
+      workMore.hidden = false;
+      return limit;
+    }
+
+    workToggle.addEventListener("click", function () {
+      workOpen = !workOpen;
+      try { sessionStorage.setItem("work-open", workOpen ? "1" : "0"); } catch (e) {}
+      if (workOpen) {
+        // Hand focus to the first card that just appeared, without jumping:
+        // it lands where the button was, right under the reader's eye.
+        var first = workCards[foldWork()];
+        if (first) first.focus({ preventScroll: true });
+      } else {
+        // Folding removes a lot of page above the button. Hold the button
+        // still on screen so the reader is not dropped into the next section.
+        var before = workToggle.getBoundingClientRect().top;
+        foldWork();
+        // "instant" overrides html's smooth scrolling: this jump must be invisible.
+        window.scrollBy({ top: workToggle.getBoundingClientRect().top - before, behavior: "instant" });
+      }
+    });
+
+    var workResizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(workResizeTimer);
+      workResizeTimer = setTimeout(foldWork, 120);
+    });
+
+    foldWork();
+
+    // One nudge of the arrow the first time the toggle scrolls into view, so
+    // it reads as "there is more below" without looping at the reader.
+    if (typeof IntersectionObserver === "function") {
+      var workNudge = new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting || workOpen) return;
+        workToggle.classList.add("nudge");
+        workNudge.disconnect();
+      }, { threshold: 1 });
+      workNudge.observe(workToggle);
+    }
+  }
+
   // Lightbox for project galleries.
   var items = Array.prototype.slice.call(
     document.querySelectorAll("[data-lightbox] .gallery-item img")

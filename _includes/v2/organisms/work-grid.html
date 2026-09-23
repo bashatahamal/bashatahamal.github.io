@@ -2,7 +2,7 @@
   <div class="container">
     {% include v2/atoms/section-heading.html num="01" id="work" title="How I Got Here" %}
     <p class="section-intro">Newest first, from early student experiments to production AI systems. Not a highlight reel, more an honest record of how I've grown as an engineer.</p>
-    <div class="grid">
+    <div class="grid" id="work-grid" data-work-grid>
       {% assign project_pages = site.pages | where: "type", "project" | sort: "name" | reverse %}
       {% for page in project_pages %}
         {% assign project_slug = page.permalink | split: "/" | last %}
@@ -10,6 +10,17 @@
           {% include v2/molecules/project-card.html page=page %}
         {% endunless %}
       {% endfor %}
+    </div>
+    <!-- main.js folds the grid to its newest rows and un-hides this toggle.
+         Without JS every card stays visible and the button never shows. -->
+    <div class="more" data-work-more hidden>
+      <div class="rule">
+        <button type="button" class="a-btn more-btn" aria-controls="work-grid" aria-expanded="false" aria-describedby="work-more-meta" data-work-toggle>
+          <span data-work-label>Keep going back to the earlier chapters</span>
+          <svg class="arrow" aria-hidden="true" viewBox="0 0 16 16" width="16" height="16"><path d="M8 2.5v10.5M3.5 8.5 8 13l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <p class="a-kicker more-meta" id="work-more-meta" data-work-meta></p>
     </div>
   </div>
 </section>
