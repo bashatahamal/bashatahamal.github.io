@@ -3,7 +3,16 @@ services:
     build: .
     volumes:
       - .:/app
+      # Gems live in a named volume so an install done at startup sticks
+      # across restarts instead of repeating every time.
+      - bundle:/usr/local/bundle
     ports:
       - "4000:4000"
+    # The bind mount brings in the local Gemfile.lock (gitignored), which can
+    # pin different versions than the image installed. `bundle check` catches
+    # that and installs the missing gems before serving.
     # --force_polling: file-change events do not cross the Windows bind mount
-    command: ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling"]
+    command: ["sh", "-c", "bundle check || bundle install && exec bundle exec jekyll serve --host 0.0.0.0 --force_polling"]
+
+volumes:
+  bundle:
