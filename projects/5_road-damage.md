@@ -13,7 +13,7 @@ labels:
     - Deep Learning
     - Image Segmentation
     - PyTorch
-summary: Road damage detection with an output of binary image and road damage recognition with an output of bounding box and it's type of class. 
+summary: Road damage detection with an output of binary image and road damage recognition with an output of bounding box and its type of class. 
 describe-opening: <br>
 describe-content:
     # - This project aims to get a model for detecting road damage with an output in the form of a black and white image and a model for recognizing road damage with output in the form of bounding box for each type of class from the available dataset.
